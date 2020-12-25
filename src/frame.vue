@@ -2,7 +2,7 @@
     <div class="hello">
         <div>Hello {{line_userid}}/{{line_username}}</div>
         <div>{{msg}}</div>
-        <button v-if="msg=='ready'" @click="getProfile">getProfile</button>
+        <button v-if="ready" @click="sendCard">發送名片</button>
     </div>
 </template>
  
@@ -12,15 +12,16 @@ module.exports = {
         return {
             line_userid:"",
             line_username:"",
-            msg:"",
+            ready:false,
+            cards:undefined,
         }
     },
     created(){
         this.init();
+        
     },
     methods:{
         async init(){
-            console.log(window.liff);
              window.liff
                 .init({
                     liffId: "1655456623-oxjPwXjM"
@@ -28,26 +29,38 @@ module.exports = {
                 .then(() => {
                     const accessToken = window.liff.getAccessToken();
                     // Start to use liff's api
-                    this.msg="ready";
+                    window.liff.getProfile()
+                        .then(profile => {
+                            this.line_userid = profile.userId;
+                            this.line_username = profile.displayName;
+                            //$("#line_userid").html("Line userID:" + line_userid);
+                            // $("#line_username").html(line_username + "&nbsp;&nbsp;您好");					
+                        })
+                    .catch((err) => {
+                        this.msg = err;
+                        alert(err.code, err.message);
+                    });
                 })
             .catch((LiffError) => {
                 // Error happens during initialization
                 alert(LiffError.code, LiffError.message);
             });
+            fetch('./cards.json')
+            .then(res=>res.json)
+            .then(data=>this.cards=data)
         },
         getProfile(){
-            console.log("here");
-            window.liff.getProfile()
-                .then(profile => {
-                    this.line_userid = profile.userId;
-                    this.line_username = profile.displayName;
-                    //$("#line_userid").html("Line userID:" + line_userid);
-                    // $("#line_username").html(line_username + "&nbsp;&nbsp;您好");					
-                })
-            .catch((err) => {
-                this.msg = err;
-                alert(err.code, err.message);
-            });
+            if (liff.isApiAvailable('shareTargetPicker')) {
+                liff.shareTargetPicker([
+                    {
+                    "type": "flex",
+                    "altText": "數位版名片",
+                    "contents": this.cards[0]
+                    }
+                ]);
+            } else {
+                alert("尚未開啟分享權限");
+            }
         }
     }
 }

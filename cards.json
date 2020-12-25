@@ -1,0 +1,170 @@
+{
+    "data":[
+    {
+        "type": "bubble",
+        "size": "giga",
+        "direction": "ltr",
+        "hero": {
+          "type": "image",
+          "url": "https://testing.brotontech.com/vouchersui/img/logo_ac.png",
+          "action": {
+            "type": "uri",
+            "label": "action",
+            "uri": "https://www.brotontech.com/"
+          },
+          "size": "full",
+          "aspectRatio": "3:1"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "image",
+              "url": "https://testing.brotontech.com/vouchersui/img/vcard03.png",
+              "align": "end",
+              "offsetTop": "-22px"
+            },
+            {
+              "type": "text",
+              "text": "于凡",
+              "weight": "bold",
+              "size": "3xl",
+              "margin": "md",
+              "offsetTop": "-130px",
+              "align": "start",
+              "offsetStart": "40px"
+            },
+            {
+              "type": "text",
+              "text": "Hanson Yu",
+              "offsetStart": "45px",
+              "offsetTop": "-120px"
+            },
+            {
+              "type": "text",
+              "text": "Junior Front End Developer",
+              "offsetStart": "45px",
+              "offsetTop": "-110px"
+            },
+            {
+              "type": "text",
+              "text": "地址:",
+              "offsetStart": "10px",
+              "weight": "bold",
+              "offsetTop": "-80px"
+            },
+            {
+              "type": "text",
+              "text": "10349 台北市大同區鄭州路87號7樓",
+              "offsetStart": "55px",
+              "offsetTop": "-102px",
+              "action": {
+                "type": "uri",
+                "label": "action",
+                "uri": "tel:0912345678"
+              }
+            },
+            {
+              "type": "text",
+              "text": "電話:",
+              "offsetStart": "10px",
+              "weight": "bold",
+              "offsetTop": "-100px"
+            },
+            {
+              "type": "text",
+              "text": "+886-2-2388-2880#12",
+              "offsetStart": "55px",
+              "offsetTop": "-122px",
+              "action": {
+                "type": "uri",
+                "label": "action",
+                "uri": "tel:0912345678"
+              }
+            },
+            {
+              "type": "text",
+              "text": "傳真:",
+              "offsetStart": "10px",
+              "weight": "bold",
+              "offsetTop": "-120px"
+            },
+            {
+              "type": "text",
+              "text": "+886-2-2559-5059",
+              "offsetStart": "55px",
+              "offsetTop": "-142px",
+              "action": {
+                "type": "uri",
+                "label": "action",
+                "uri": "tel:0912345678"
+              }
+            },
+            {
+              "type": "text",
+              "text": "手機:",
+              "offsetStart": "10px",
+              "weight": "bold",
+              "offsetTop": "-140px"
+            },
+            {
+              "type": "text",
+              "text": "+886-935-224-663",
+              "offsetStart": "55px",
+              "offsetTop": "-162px",
+              "color": "#1B52C9",
+              "action": {
+                "type": "uri",
+                "label": "action",
+                "uri": "tel:0912345678"
+              }
+            },
+            {
+              "type": "text",
+              "text": "郵箱:",
+              "offsetStart": "10px",
+              "weight": "bold",
+              "offsetTop": "-160px"
+            },
+            {
+              "type": "text",
+              "text": "hansonyu@brotontech.com",
+              "offsetStart": "55px",
+              "offsetTop": "-182px",
+              "color": "#1B52C9",
+              "action": {
+                "type": "uri",
+                "label": "action",
+                "uri": "mailto:christina@brotontech.com"
+              }
+            },
+            {
+              "type": "text",
+              "text": "統編:",
+              "offsetStart": "10px",
+              "weight": "bold",
+              "offsetTop": "-180px"
+            },
+            {
+              "type": "text",
+              "text": "42835355",
+              "offsetStart": "55px",
+              "offsetTop": "-202px",
+              "action": {
+                "type": "uri",
+                "label": "action",
+                "uri": "tel:0912345678"
+              }
+            }
+          ],
+          "height": "310px"
+        },
+        "styles": {
+          "footer": {
+            "separator": true
+          }
+        }
+      }
+    ]
+}

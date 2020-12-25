@@ -1,5 +1,8 @@
 <template>
-    <div class="hello">Hello {{line_userid}}/{{line_username}}</div>
+    <div class="hello">
+        <div>Hello {{line_userid}}/{{line_username}}</div>
+        <div>{{msg}}</div>
+    </div>
 </template>
  
 <script>
@@ -8,6 +11,7 @@ module.exports = {
         return {
             line_userid:"",
             line_username:"",
+            msg:"",
         }
     },
     created(){
@@ -31,6 +35,7 @@ module.exports = {
                             // $("#line_username").html(line_username + "&nbsp;&nbsp;您好");					
                         })
                     .catch((err) => {
+                        this.msg = JSON.parse(err).message;
                         alert('getProfile error', err);
                     });
                 })

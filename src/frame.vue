@@ -49,13 +49,13 @@ module.exports = {
             .then(data=>this.cards=data.data)
         },
         sendCard(){
-            var messages = JSON.parse(this.cards[0]);
+            // var messages = JSON.parse(this.cards[0]);
             if (liff.isApiAvailable('shareTargetPicker')) {
                 liff.shareTargetPicker([
                     {
                     "type": "flex",
                     "altText": "數位版名片",
-                    "contents": messages
+                    "contents": this.cards[0]
                     }
                 ]);
             } else {

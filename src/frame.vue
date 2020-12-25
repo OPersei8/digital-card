@@ -2,7 +2,7 @@
     <div class="hello">
         <div>Hello {{line_userid}}/{{line_username}}</div>
         <div>{{msg}}</div>
-        <button v-if="msg=='ready'">getProfile</button>
+        <button v-if="msg=='ready'" @click="getProfile">getProfile</button>
     </div>
 </template>
  

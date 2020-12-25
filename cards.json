@@ -156,6 +156,14 @@
                 "label": "action",
                 "uri": "tel:0912345678"
               }
+            },
+            {
+                "type": "button",
+                "action": {
+                  "type": "uri",
+                  "label": "分享",
+                  "uri": "https://liff.line.me/1655456623-oxjPwXjM"
+                }
             }
           ],
           "height": "310px"

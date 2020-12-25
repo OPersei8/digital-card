@@ -48,7 +48,7 @@ module.exports = {
             .then(res=>res.json())
             .then(data=>this.cards=data.data)
         },
-        getProfile(){
+        sendCard(){
             var messages = JSON.parse(this.cards[0]);
             if (liff.isApiAvailable('shareTargetPicker')) {
                 liff.shareTargetPicker([

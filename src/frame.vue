@@ -32,9 +32,7 @@ module.exports = {
                     window.liff.getProfile()
                         .then(profile => {
                             this.line_userid = profile.userId;
-                            this.line_username = profile.displayName;
-                            //$("#line_userid").html("Line userID:" + line_userid);
-                            // $("#line_username").html(line_username + "&nbsp;&nbsp;您好");					
+                            this.line_username = profile.displayName;					
                         })
                     .catch((err) => {
                         this.msg = err;

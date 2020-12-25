@@ -45,16 +45,17 @@ module.exports = {
                 alert(LiffError.code, LiffError.message);
             });
             fetch('./cards.json')
-            .then(res=>res.json)
-            .then(data=>this.cards=data)
+            .then(res=>res.json())
+            .then(data=>this.cards=data.data)
         },
         getProfile(){
+            var messages = JSON.parse(this.cards[0]);
             if (liff.isApiAvailable('shareTargetPicker')) {
                 liff.shareTargetPicker([
                     {
                     "type": "flex",
                     "altText": "數位版名片",
-                    "contents": this.cards[0]
+                    "contents": messages
                     }
                 ]);
             } else {

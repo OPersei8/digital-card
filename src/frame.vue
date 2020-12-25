@@ -36,6 +36,7 @@ module.exports = {
             });
         },
         getProfile(){
+            console.log("here");
             window.liff.getProfile()
                 .then(profile => {
                     this.line_userid = profile.userId;

@@ -25,7 +25,7 @@ module.exports = {
                     liffId: "1655456623-oxjPwXjM"
                 })
                 .then(() => {
-                    const accessToken = liff.getAccessToken();
+                    const accessToken = window.liff.getAccessToken();
                     // Start to use liff's api
                     window.liff.getProfile()
                         .then(profile => {
@@ -35,7 +35,7 @@ module.exports = {
                             // $("#line_username").html(line_username + "&nbsp;&nbsp;您好");					
                         })
                     .catch((err) => {
-                        this.msg = JSON.stringify(err).message;
+                        this.msg = err;
                         alert('getProfile error', err);
                     });
                 })

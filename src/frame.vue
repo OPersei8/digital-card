@@ -18,7 +18,7 @@ module.exports = {
             console.log(window.liff);
              window.liff
                 .init({
-                    liffId: "1655339331-ZL5yn8na"
+                    liffId: "1655456623-oxjPwXjM"
                 })
                 .then(() => {
                     const accessToken = liff.getAccessToken();

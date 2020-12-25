@@ -1,0 +1,11 @@
+#my-app{
+    min-height: 100vh;
+    min-width: 100vw;
+    position:relative;
+
+}
+
+html,body{
+    margin:0;
+    padding:0;
+}

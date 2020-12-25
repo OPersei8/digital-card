@@ -10,13 +10,23 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="./src/main.css">
+        <script src="https://unpkg.com/vue"></script>
+        <script src="https://unpkg.com/http-vue-loader"></script>
+    	<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/versions/2.3.0/sdk.js"></script>
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        test
-        <script src="" async defer></script>
+        <div id="my-app">
+            <my-page></my-page>
+        </div>
+
+        <script type="text/javascript">
+            new Vue({
+              el: '#my-app',
+              components: {
+                'my-page': httpVueLoader('./src/frame.vue')
+              }
+            });
+          </script>
     </body>
 </html>

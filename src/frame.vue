@@ -35,7 +35,7 @@ module.exports = {
                             // $("#line_username").html(line_username + "&nbsp;&nbsp;您好");					
                         })
                     .catch((err) => {
-                        this.msg = JSON.parse(err).message;
+                        this.msg = JSON.stringify(err).message;
                         alert('getProfile error', err);
                     });
                 })

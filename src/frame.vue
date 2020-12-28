@@ -10,7 +10,7 @@
             <div v-for="card in cards" :key="card.index" class="card">
                 <div class="card-info">
                     <div>{{card.name}}</div>
-                    <div>職稱:{{card.data.body.contents[3].text}}</div>
+                    <!-- <div>職稱:{{card.data.body.contents[3].text}}</div> -->
                 </div>
                 <button class="card-send" @click="sendCard(card.data)">發送名片</button>
             </div>
@@ -32,10 +32,11 @@ module.exports = {
             myCard:undefined
         }
     },
-    created(){
-        // this.styleTest();
-        this.init();
-        
+    mounted(){
+        if(confirm("是否為Line畫面"))
+            this.init();        
+        else
+            this.styleTest();
     },
     methods:{
         styleTest(){
@@ -44,9 +45,9 @@ module.exports = {
             .then(data=>{
                 this.cards=data.data;
                 this.ready=true;
+                this.checkHasCard();
             })    
             this.line_username = "于凡";	
-            this.checkHasCard();
             
         },
         async init(){
@@ -125,15 +126,19 @@ module.exports = {
 .card-container{
     width:100%;
     background: #fff3;
+    overflow-y: auto;
 }
 
 .card{
     box-shadow: 2px 2px 2px 2px #0002;
     display: flex;    
+    align-items: center;
+    height:40px;
 }
 .card-info{
     flex:1;
 }
 .card-send{
+    height: 100%;
 }
 </style>

@@ -33,7 +33,7 @@
                   "weight": "bold",
                   "size": "3xl",
                   "margin": "md",
-                  "offsetTop": "-130px",
+                  "offsetTop": "-125px",
                   "align": "start",
                   "offsetStart": "40px"
                 },
@@ -41,26 +41,26 @@
                   "type": "text",
                   "text": "Hanson Yu",
                   "offsetStart": "45px",
-                  "offsetTop": "-120px"
+                  "offsetTop": "-125px"
                 },
                 {
                   "type": "text",
                   "text": "Junior Front End Developer",
                   "offsetStart": "45px",
-                  "offsetTop": "-110px"
+                  "offsetTop": "-125px"
                 },
                 {
                   "type": "text",
                   "text": "地址:",
                   "offsetStart": "10px",
                   "weight": "bold",
-                  "offsetTop": "-80px"
+                  "offsetTop": "-100px"
                 },
                 {
                   "type": "text",
                   "text": "10349 台北市大同區鄭州路87號7樓",
                   "offsetStart": "55px",
-                  "offsetTop": "-102px",
+                  "offsetTop": "-122px",
                   "action": {
                     "type": "uri",
                     "label": "action",
@@ -72,13 +72,13 @@
                   "text": "電話:",
                   "offsetStart": "10px",
                   "weight": "bold",
-                  "offsetTop": "-100px"
+                  "offsetTop": "-120px"
                 },
                 {
                   "type": "text",
                   "text": "+886-2-2388-2880#12",
                   "offsetStart": "55px",
-                  "offsetTop": "-122px",
+                  "offsetTop": "-142px",
                   "action": {
                     "type": "uri",
                     "label": "action",
@@ -90,13 +90,13 @@
                   "text": "傳真:",
                   "offsetStart": "10px",
                   "weight": "bold",
-                  "offsetTop": "-120px"
+                  "offsetTop": "-140px"
                 },
                 {
                   "type": "text",
                   "text": "+886-2-2559-5059",
                   "offsetStart": "55px",
-                  "offsetTop": "-142px",
+                  "offsetTop": "-162px",
                   "action": {
                     "type": "uri",
                     "label": "action",
@@ -108,13 +108,13 @@
                   "text": "手機:",
                   "offsetStart": "10px",
                   "weight": "bold",
-                  "offsetTop": "-140px"
+                  "offsetTop": "-160px"
                 },
                 {
                   "type": "text",
                   "text": "+886-935-224-663",
                   "offsetStart": "55px",
-                  "offsetTop": "-162px",
+                  "offsetTop": "-182px",
                   "color": "#1B52C9",
                   "action": {
                     "type": "uri",
@@ -127,13 +127,13 @@
                   "text": "郵箱:",
                   "offsetStart": "10px",
                   "weight": "bold",
-                  "offsetTop": "-160px"
+                  "offsetTop": "-180px"
                 },
                 {
                   "type": "text",
                   "text": "hansonyu@brotontech.com",
                   "offsetStart": "55px",
-                  "offsetTop": "-182px",
+                  "offsetTop": "-202px",
                   "color": "#1B52C9",
                   "action": {
                     "type": "uri",
@@ -146,13 +146,13 @@
                   "text": "統編:",
                   "offsetStart": "10px",
                   "weight": "bold",
-                  "offsetTop": "-180px"
+                  "offsetTop": "-200px"
                 },
                 {
                   "type": "text",
                   "text": "42835355",
                   "offsetStart": "55px",
-                  "offsetTop": "-202px",
+                  "offsetTop": "-222px",
                   "action": {
                     "type": "uri",
                     "label": "action",
@@ -163,7 +163,7 @@
                   "type": "button",
                   "action": {
                     "type": "uri",
-                    "label": "action",
+                    "label": "分享",
                     "uri": "https://liff.line.me/1655456623-oxjPwXjM"
                   },
                   "position": "absolute",
@@ -178,13 +178,13 @@
                   "offsetEnd": "10px"
                 }
               ],
-              "height": "310px"
+              "height": "280px"
             },
             "styles": {
               "footer": {
                 "separator": true
               }
             }
-        }}
+          }}
     ]
 }

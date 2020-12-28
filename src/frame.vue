@@ -75,6 +75,7 @@ module.exports = {
     background: black;
     color:white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;

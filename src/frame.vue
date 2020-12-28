@@ -1,8 +1,12 @@
 <template>
     <div class="hello">
         <div>Hello {{line_userid}}/{{line_username}}</div>
-        <div>{{msg}}</div>
-        <button v-if="ready" @click="sendCard">發送名片</button>
+        <div v-for="card in cards" :key="card.index">
+            {{card.name}}
+            <button @click="sendCard(card.data)">發送名片</button>
+        </div>
+        <!-- <div>{{msg}}</div>
+        <button v-if="ready" @click="sendCard">發送名片</button> -->
     </div>
 </template>
  
@@ -48,14 +52,14 @@ module.exports = {
             .then(res=>res.json())
             .then(data=>this.cards=data.data)
         },
-        sendCard(){
+        sendCard(val){
             // var messages = JSON.parse(this.cards[0]);
             if (liff.isApiAvailable('shareTargetPicker')) {
                 liff.shareTargetPicker([
                     {
                     "type": "flex",
                     "altText": "數位版名片",
-                    "contents": this.cards[0]
+                    "contents": val
                     }
                 ]);
             } else {

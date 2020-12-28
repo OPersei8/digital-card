@@ -1,6 +1,8 @@
 {
     "data":[
         {
+          "name":"于凡",
+          "data":{
             "type": "bubble",
             "size": "giga",
             "direction": "ltr",
@@ -183,6 +185,6 @@
                 "separator": true
               }
             }
-        }
+        }}
     ]
 }

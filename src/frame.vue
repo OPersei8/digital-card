@@ -1,11 +1,19 @@
 <template>
     <div class="hello">
-        <div>{{line_username}} ，您好</div>
-        <div v-if="hasCard"><button @click="sendCard(myCard)">發送自己名片<button></div><br>
+        <div class="welcome">
+            <div class="welcome-header">數位名片</div>
+            <div class="welcome-body">{{line_username}} ，您好</div>
+            <div v-if="hasCard"><button @click="sendCard(myCard)">發送自己名片</button></div><br>
+        </div>
         <div>發送其他名片:</div>
-        <div v-for="card in cards" :key="card.index">
-            {{card.name}}
-            <button @click="sendCard(card.data)">發送名片</button>
+        <div v-if="ready" class="card-container">
+            <div v-for="card in cards" :key="card.index" class="card">
+                <div class="card-info">
+                    <div>{{card.name}}</div>
+                    <div>職稱:{{card.data.body.contents[3].text}}</div>
+                </div>
+                <button class="card-send" @click="sendCard(card.data)">發送名片</button>
+            </div>
         </div>
         <!-- <div>{{msg}}</div>
         <button v-if="ready" @click="sendCard">發送名片</button> -->
@@ -25,10 +33,22 @@ module.exports = {
         }
     },
     created(){
+        // this.styleTest();
         this.init();
         
     },
     methods:{
+        styleTest(){
+            fetch('./cards.json')
+            .then(res=>res.json())
+            .then(data=>{
+                this.cards=data.data;
+                this.ready=true;
+            })    
+            this.line_username = "于凡";	
+            this.checkHasCard();
+            
+        },
         async init(){
              window.liff
                 .init({
@@ -83,14 +103,37 @@ module.exports = {
  
 <style>
 .hello {
-    background: black;
+    background: #333;
     color:white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     height: 100%;
     width: 100%;
     position:absolute; /*css bug */
+}
+.welcome{
+    width:100%;
+    padding:10px 30px;
+    background: #5555;
+    box-shadow: 10px 2px 10px 10px #fff2;
+}
+.welcome-header{
+    font-size: 20px;
+}
+.card-container{
+    width:100%;
+    background: #fff3;
+}
+
+.card{
+    box-shadow: 2px 2px 2px 2px #0002;
+    display: flex;    
+}
+.card-info{
+    flex:1;
+}
+.card-send{
 }
 </style>

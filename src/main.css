@@ -1,8 +1,13 @@
+@font-face {
+    font-family: NotoSansTC;
+    src: url(NotoSansTC-Regular.otf);
+  }
+
 #my-app{
     min-height: 100vh;
     min-width: 100vw;
     position:relative;
-
+    font-family: NotoSansTC;
 }
 
 html,body{

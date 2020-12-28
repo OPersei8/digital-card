@@ -8,11 +8,13 @@
     min-width: 100vw;
     position:relative;
     font-family: NotoSansTC;
+    overflow: hidden;    
 }
 
 html{
     margin:0;
     padding:0;
+    overflow: hidden;
 }
 body{
     margin:0;

@@ -34,7 +34,7 @@ module.exports = {
         }
     },
     mounted(){
-        if(confirm("是否為Line畫面"))
+        if(confirm("DEBUG模式:是否使用Line開啟"))
             this.init();        
         else
             this.styleTest();
@@ -140,7 +140,9 @@ module.exports = {
     box-shadow: 2px 2px 2px 2px #0002;
     display: flex;    
     align-items: center;
-    height:40px;
+    height:60px;
+    margin:5px 3px;
+    font-size: 16px;
 }
 .card-info{
     flex:1;

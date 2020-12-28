@@ -1,16 +1,17 @@
 <template>
     <div class="hello">
         <div class="welcome">
-            <div class="welcome-header">數位名片</div>
-            <div class="welcome-body">{{line_username}} ，您好</div>
-            <div v-if="hasCard"><button @click="sendCard(myCard)">發送自己名片</button></div><br>
+            <div class="welcome-header">數位名片<br>{{line_username}} ，您好</div>
+            <div class="welcome-body">
+            <div v-if="hasCard" class="h100"><button class="h100" @click="sendCard(myCard)">發送自己名片</button></div><br>
+            </div>
         </div>
-        <div>發送其他名片:</div>
+        <div>發送同事名片:</div>
         <div v-if="ready" class="card-container">
             <div v-for="card in cards" :key="card.index" class="card">
                 <div class="card-info">
                     <div>{{card.name}}</div>
-                    <!-- <div>職稱:{{card.data.body.contents[3].text}}</div> -->
+                    <div>職稱:{{card.data.body.contents[3].text}}</div>
                 </div>
                 <button class="card-send" @click="sendCard(card.data)">發送名片</button>
             </div>
@@ -115,6 +116,7 @@ module.exports = {
     position:absolute; /*css bug */
 }
 .welcome{
+    display: flex;
     width:100%;
     padding:10px 30px;
     background: #5555;
@@ -122,11 +124,16 @@ module.exports = {
 }
 .welcome-header{
     font-size: 20px;
+    flex:1;
 }
 .card-container{
     width:100%;
     background: #fff3;
     overflow-y: auto;
+}
+
+.h100{
+    height: 100%;
 }
 
 .card{

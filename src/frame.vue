@@ -1,6 +1,8 @@
 <template>
     <div class="hello">
-        <div>Hello {{line_userid}}/{{line_username}}</div>
+        <div>{{line_username}} ，您好</div>
+        <div v-if="hasCard"><button @click="sendCard(myCard)">發送自己名片<button></div><br>
+        <div>發送其他名片:</div>
         <div v-for="card in cards" :key="card.index">
             {{card.name}}
             <button @click="sendCard(card.data)">發送名片</button>
@@ -18,6 +20,8 @@ module.exports = {
             line_username:"",
             ready:false,
             cards:undefined,
+            hasCard:false,
+            myCard:undefined
         }
     },
     created(){
@@ -37,6 +41,7 @@ module.exports = {
                         .then(profile => {
                             this.line_userid = profile.userId;
                             this.line_username = profile.displayName;	
+                            this.checkHasCard();
                             this.ready=true;				
                         })
                     .catch((err) => {
@@ -51,6 +56,12 @@ module.exports = {
             fetch('./cards.json')
             .then(res=>res.json())
             .then(data=>this.cards=data.data)
+        },
+        checkHasCard(){
+            if(this.cards.some(emt=>emt.name == this.line_username)){
+                this.cards.find(emt => this.myCard = emt.data);
+                this.hasCard = true;
+            }
         },
         sendCard(val){
             // var messages = JSON.parse(this.cards[0]);

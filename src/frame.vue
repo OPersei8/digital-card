@@ -34,10 +34,13 @@ module.exports = {
         }
     },
     mounted(){
-        if(confirm("DEBUG: 是否使用Line開啟"))
-            this.init();        
-        else
-            this.styleTest();
+        // this.checkLogin().then(()=>this.init());
+        this.init();        
+
+        // if(confirm("DEBUG: 是否使用Line開啟"))
+        //     this.init();        
+        // else
+        //     this.styleTest();
     },
     methods:{
         styleTest(){
@@ -51,13 +54,21 @@ module.exports = {
             this.line_username = "于凡";	
             
         },
+        checkLogin(){
+            return new Promise((resolve,reject)=>{
+
+            })
+        },
         async init(){
              window.liff
                 .init({
                     liffId: "1655456623-oxjPwXjM"
                 })
                 .then(() => {
-                    const accessToken = window.liff.getAccessToken();
+                    // const accessToken = window.liff.getAccessToken();
+                    if(!liff.isLoggedIn()){
+                        liff.login();
+                    }
                     // Start to use liff's api
                     window.liff.getProfile()
                         .then(profile => {
@@ -73,7 +84,8 @@ module.exports = {
                 })
             .catch((LiffError) => {
                 // Error happens during initialization
-                alert(LiffError.code, LiffError.message);
+                // alert(LiffError.code, LiffError.message);
+                liff.login()
             });
             fetch('./cards.json')
             .then(res=>res.json())

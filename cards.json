@@ -1,641 +1,196 @@
 {
     "data":[
-        {
-          "name":"于凡",
-          "data":{
-            "type": "bubble",
-            "size": "giga",
-            "direction": "ltr",
-            "hero": {
-              "type": "image",
-              "url": "https://testing.brotontech.com/vouchersui/img/logo_ac.png",
-              "action": {
-                "type": "uri",
-                "label": "action",
-                "uri": "https://www.brotontech.com/"
-              },
-              "size": "full",
-              "aspectRatio": "3:1"
-            },
-            "body": {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
-                {
+            {
+              "name":"于凡",
+              "data":{
+                "type": "bubble",
+                "size": "giga",
+                "direction": "ltr",
+                "hero": {
                   "type": "image",
-                  "url": "https://opersei8.github.io/digital-card/QRCodes/Hansonyu.jpg",
-                  "align": "end",
-                  "offsetTop": "-22px"
-                },
-                {
-                  "type": "text",
-                  "text": "于凡",
-                  "weight": "bold",
-                  "size": "3xl",
-                  "margin": "md",
-                  "offsetTop": "-125px",
-                  "align": "start",
-                  "offsetStart": "40px",
+                  "url": "https://testing.brotontech.com/vouchersui/img/logo_ac.png",
                   "action": {
                     "type": "uri",
                     "label": "action",
-                    "uri": "https://opersei8.github.io/digital-card/vcard/hansonyu.vcf"
-                  }
+                    "uri": "https://www.brotontech.com/"
+                  },
+                  "size": "full",
+                  "aspectRatio": "3:1"
                 },
-                {
-                  "type": "text",
-                  "text": "Hanson Yu",
-                  "offsetStart": "45px",
-                  "offsetTop": "-125px"
-                },
-                {
-                  "type": "text",
-                  "text": "Junior Front End Developer",
-                  "offsetStart": "45px",
-                  "offsetTop": "-125px"
-                },
-                {
-                  "type": "text",
-                  "text": "地址:",
-                  "offsetStart": "10px",
-                  "weight": "bold",
-                  "offsetTop": "-100px"
-                },
-                {
-                  "type": "text",
-                  "text": "10349 台北市大同區鄭州路87號7樓",
-                  "offsetStart": "55px",
-                  "offsetTop": "-122px",
-                  "action": {
-                    "type": "uri",
-                    "label": "action",
-                    "uri": "tel:0912345678"
-                  }
-                },
-                {
-                  "type": "text",
-                  "text": "電話:",
-                  "offsetStart": "10px",
-                  "weight": "bold",
-                  "offsetTop": "-120px"
-                },
-                {
-                  "type": "text",
-                  "text": "+886-2-2388-2880#12",
-                  "offsetStart": "55px",
-                  "offsetTop": "-142px",
-                  "action": {
-                    "type": "uri",
-                    "label": "action",
-                    "uri": "tel:0912345678"
-                  }
-                },
-                {
-                  "type": "text",
-                  "text": "傳真:",
-                  "offsetStart": "10px",
-                  "weight": "bold",
-                  "offsetTop": "-140px"
-                },
-                {
-                  "type": "text",
-                  "text": "+886-2-2559-5059",
-                  "offsetStart": "55px",
-                  "offsetTop": "-162px",
-                  "action": {
-                    "type": "uri",
-                    "label": "action",
-                    "uri": "tel:0912345678"
-                  }
-                },
-                {
-                  "type": "text",
-                  "text": "手機:",
-                  "offsetStart": "10px",
-                  "weight": "bold",
-                  "offsetTop": "-160px"
-                },
-                {
-                  "type": "text",
-                  "text": "+886-935-224-663",
-                  "offsetStart": "55px",
-                  "offsetTop": "-182px",
-                  "color": "#1B52C9",
-                  "action": {
-                    "type": "uri",
-                    "label": "action",
-                    "uri": "tel:0912345678"
-                  }
-                },
-                {
-                  "type": "text",
-                  "text": "郵箱:",
-                  "offsetStart": "10px",
-                  "weight": "bold",
-                  "offsetTop": "-180px"
-                },
-                {
-                  "type": "text",
-                  "text": "hansonyu@brotontech.com",
-                  "offsetStart": "55px",
-                  "offsetTop": "-202px",
-                  "color": "#1B52C9",
-                  "action": {
-                    "type": "uri",
-                    "label": "action",
-                    "uri": "mailto:hansonyu@brotontech.com"
-                  }
-                },
-                {
-                  "type": "text",
-                  "text": "統編:",
-                  "offsetStart": "10px",
-                  "weight": "bold",
-                  "offsetTop": "-200px"
-                },
-                {
-                  "type": "text",
-                  "text": "42835355",
-                  "offsetStart": "55px",
-                  "offsetTop": "-222px",
-                  "action": {
-                    "type": "uri",
-                    "label": "action",
-                    "uri": "tel:0912345678"
-                  }
-                },
-                {
-                  "type": "button",
-                  "action": {
-                    "type": "uri",
-                    "label": "分享",
-                    "uri": "https://liff.line.me/1655456623-oxjPwXjM"
-                  },
-                  "position": "absolute",
-                  "gravity": "bottom",
-                  "adjustMode": "shrink-to-fit",
-                  "color": "#000000",
-                  "style": "link",
-                  "margin": "xs",
-                  "height": "sm",
-                  "flex": 0,
-                  "offsetBottom": "10px",
-                  "offsetEnd": "10px"
-                }
-              ],
-              "height": "280px"
-            },
-            "styles": {
-              "footer": {
-                "separator": true
-              }
-            }
-          }},
-          {
-            "name":"測試",
-            "data":{
-              "type": "bubble",
-              "size": "giga",
-              "direction": "ltr",
-              "hero": {
-                "type": "image",
-                "url": "https://testing.brotontech.com/vouchersui/img/logo_ac.png",
-                "action": {
-                  "type": "uri",
-                  "label": "action",
-                  "uri": "https://www.brotontech.com/"
-                },
-                "size": "full",
-                "aspectRatio": "3:1"
-              },
-              "body": {
-                "type": "box",
-                "layout": "vertical",
-                "contents": [
-                  {
-                    "type": "image",
-                    "url": "https://testing.brotontech.com/vouchersui/img/vcard03.png",
-                    "align": "end",
-                    "offsetTop": "-22px"
-                  },
-                  {
-                    "type": "text",
-                    "text": "測試",
-                    "weight": "bold",
-                    "size": "3xl",
-                    "margin": "md",
-                    "offsetTop": "-125px",
-                    "align": "start",
-                    "offsetStart": "40px"
-                  },
-                  {
-                    "type": "text",
-                    "text": "test person",
-                    "offsetStart": "45px",
-                    "offsetTop": "-125px"
-                  },
-                  {
-                    "type": "text",
-                    "text": "Junior Test Engineer",
-                    "offsetStart": "45px",
-                    "offsetTop": "-125px"
-                  },
-                  {
-                    "type": "text",
-                    "text": "地址:",
-                    "offsetStart": "10px",
-                    "weight": "bold",
-                    "offsetTop": "-100px"
-                  },
-                  {
-                    "type": "text",
-                    "text": "10349 台北市大同區鄭州路87號7樓",
-                    "offsetStart": "55px",
-                    "offsetTop": "-122px",
-                    "action": {
-                      "type": "uri",
-                      "label": "action",
-                      "uri": "tel:0912345678"
-                    }
-                  },
-                  {
-                    "type": "text",
-                    "text": "電話:",
-                    "offsetStart": "10px",
-                    "weight": "bold",
-                    "offsetTop": "-120px"
-                  },
-                  {
-                    "type": "text",
-                    "text": "+886-2-2388-2880#12",
-                    "offsetStart": "55px",
-                    "offsetTop": "-142px",
-                    "action": {
-                      "type": "uri",
-                      "label": "action",
-                      "uri": "tel:0912345678"
-                    }
-                  },
-                  {
-                    "type": "text",
-                    "text": "傳真:",
-                    "offsetStart": "10px",
-                    "weight": "bold",
-                    "offsetTop": "-140px"
-                  },
-                  {
-                    "type": "text",
-                    "text": "+886-2-2559-5059",
-                    "offsetStart": "55px",
-                    "offsetTop": "-162px",
-                    "action": {
-                      "type": "uri",
-                      "label": "action",
-                      "uri": "tel:0912345678"
-                    }
-                  },
-                  {
-                    "type": "text",
-                    "text": "手機:",
-                    "offsetStart": "10px",
-                    "weight": "bold",
-                    "offsetTop": "-160px"
-                  },
-                  {
-                    "type": "text",
-                    "text": "+886-935-224-663",
-                    "offsetStart": "55px",
-                    "offsetTop": "-182px",
-                    "color": "#1B52C9",
-                    "action": {
-                      "type": "uri",
-                      "label": "action",
-                      "uri": "tel:0912345678"
-                    }
-                  },
-                  {
-                    "type": "text",
-                    "text": "郵箱:",
-                    "offsetStart": "10px",
-                    "weight": "bold",
-                    "offsetTop": "-180px"
-                  },
-                  {
-                    "type": "text",
-                    "text": "hansonyu@brotontech.com",
-                    "offsetStart": "55px",
-                    "offsetTop": "-202px",
-                    "color": "#1B52C9",
-                    "action": {
-                      "type": "uri",
-                      "label": "action",
-                      "uri": "mailto:hansonyu@brotontech.com"
-                    }
-                  },
-                  {
-                    "type": "text",
-                    "text": "統編:",
-                    "offsetStart": "10px",
-                    "weight": "bold",
-                    "offsetTop": "-200px"
-                  },
-                  {
-                    "type": "text",
-                    "text": "42835355",
-                    "offsetStart": "55px",
-                    "offsetTop": "-222px",
-                    "action": {
-                      "type": "uri",
-                      "label": "action",
-                      "uri": "tel:0912345678"
-                    }
-                  },
-                  {
-                    "type": "button",
-                    "action": {
-                      "type": "uri",
-                      "label": "分享",
-                      "uri": "https://liff.line.me/1655456623-oxjPwXjM"
+                "body": {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "image",
+                      "url": "https://opersei8.github.io/digital-card/QRCodes/Hansonyu.jpg",
+                      "align": "end",
+                      "offsetTop": "-22px"
                     },
-                    "position": "absolute",
-                    "gravity": "bottom",
-                    "adjustMode": "shrink-to-fit",
-                    "color": "#000000",
-                    "style": "link",
-                    "margin": "xs",
-                    "height": "sm",
-                    "flex": 0,
-                    "offsetBottom": "10px",
-                    "offsetEnd": "10px"
+                    {
+                      "type": "text",
+                      "text": "于凡",
+                      "weight": "bold",
+                      "size": "3xl",
+                      "margin": "md",
+                      "offsetTop": "-125px",
+                      "align": "start",
+                      "offsetStart": "40px",
+                      "action": {
+                        "type": "uri",
+                        "label": "action",
+                        "uri": "https://opersei8.github.io/digital-card/vcard/hansonyu.vcf"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "text": "Hanson Yu",
+                      "offsetStart": "45px",
+                      "offsetTop": "-125px"
+                    },
+                    {
+                      "type": "text",
+                      "text": "Junior Front End Developer",
+                      "offsetStart": "45px",
+                      "offsetTop": "-125px"
+                    },
+                    {
+                      "type": "text",
+                      "text": "地址:",
+                      "offsetStart": "10px",
+                      "weight": "bold",
+                      "offsetTop": "-100px"
+                    },
+                    {
+                      "type": "text",
+                      "text": "10349 台北市大同區鄭州路87號7樓",
+                      "offsetStart": "55px",
+                      "offsetTop": "-122px",
+                      "action": {
+                        "type": "uri",
+                        "label": "action",
+                        "uri": "tel:0912345678"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "text": "電話:",
+                      "offsetStart": "10px",
+                      "weight": "bold",
+                      "offsetTop": "-120px"
+                    },
+                    {
+                      "type": "text",
+                      "text": "+886-2-2388-2880#12",
+                      "offsetStart": "55px",
+                      "offsetTop": "-142px",
+                      "action": {
+                        "type": "uri",
+                        "label": "action",
+                        "uri": "tel:0912345678"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "text": "傳真:",
+                      "offsetStart": "10px",
+                      "weight": "bold",
+                      "offsetTop": "-140px"
+                    },
+                    {
+                      "type": "text",
+                      "text": "+886-2-2559-5059",
+                      "offsetStart": "55px",
+                      "offsetTop": "-162px",
+                      "action": {
+                        "type": "uri",
+                        "label": "action",
+                        "uri": "tel:0912345678"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "text": "手機:",
+                      "offsetStart": "10px",
+                      "weight": "bold",
+                      "offsetTop": "-160px"
+                    },
+                    {
+                      "type": "text",
+                      "text": "+886-935-224-663",
+                      "offsetStart": "55px",
+                      "offsetTop": "-182px",
+                      "color": "#1B52C9",
+                      "action": {
+                        "type": "uri",
+                        "label": "action",
+                        "uri": "tel:0912345678"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "text": "郵箱:",
+                      "offsetStart": "10px",
+                      "weight": "bold",
+                      "offsetTop": "-180px"
+                    },
+                    {
+                      "type": "text",
+                      "text": "hansonyu@brotontech.com",
+                      "offsetStart": "55px",
+                      "offsetTop": "-202px",
+                      "color": "#1B52C9",
+                      "action": {
+                        "type": "uri",
+                        "label": "action",
+                        "uri": "mailto:hansonyu@brotontech.com"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "text": "統編:",
+                      "offsetStart": "10px",
+                      "weight": "bold",
+                      "offsetTop": "-200px"
+                    },
+                    {
+                      "type": "text",
+                      "text": "42835355",
+                      "offsetStart": "55px",
+                      "offsetTop": "-222px",
+                      "action": {
+                        "type": "uri",
+                        "label": "action",
+                        "uri": "tel:0912345678"
+                      }
+                    },
+                    {
+                      "type": "button",
+                      "action": {
+                        "type": "uri",
+                        "label": "分享",
+                        "uri": "https://liff.line.me/1655456623-oxjPwXjM"
+                      },
+                      "position": "absolute",
+                      "gravity": "bottom",
+                      "adjustMode": "shrink-to-fit",
+                      "color": "#000000",
+                      "style": "link",
+                      "margin": "xs",
+                      "height": "sm",
+                      "flex": 0,
+                      "offsetBottom": "10px",
+                      "offsetEnd": "10px"
+                    }
+                  ],
+                  "height": "280px"
+                },
+                "styles": {
+                  "footer": {
+                    "separator": true
                   }
-                ],
-                "height": "280px"
-              },
-              "styles": {
-                "footer": {
-                  "separator": true
-                }
-              }
-            }},
-            {
-              "name":"test1",
-              "data":{
-                "body":{
-                  "contents":[
-                    {},{},{},
-                    {
-                      "text":"Junior Test Engineer"
-                    }
-                  ]
                 }
               }
             },
-            {
-              "name":"test1",
-              "data":{
-                "body":{
-                  "contents":[
-                    {},{},{},
-                    {
-                      "text":"Junior Test Engineer"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name":"test1",
-              "data":{
-                "body":{
-                  "contents":[
-                    {},{},{},
-                    {
-                      "text":"Junior Test Engineer"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name":"test1",
-              "data":{
-                "body":{
-                  "contents":[
-                    {},{},{},
-                    {
-                      "text":"Junior Test Engineer"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name":"test1",
-              "data":{
-                "body":{
-                  "contents":[
-                    {},{},{},
-                    {
-                      "text":"Junior Test Engineer"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name":"test1",
-              "data":{
-                "body":{
-                  "contents":[
-                    {},{},{},
-                    {
-                      "text":"Junior Test Engineer"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name":"test1",
-              "data":{
-                "body":{
-                  "contents":[
-                    {},{},{},
-                    {
-                      "text":"Junior Test Engineer"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name":"test1",
-              "data":{
-                "body":{
-                  "contents":[
-                    {},{},{},
-                    {
-                      "text":"Junior Test Engineer"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name":"test1",
-              "data":{
-                "body":{
-                  "contents":[
-                    {},{},{},
-                    {
-                      "text":"Junior Test Engineer"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name":"test1",
-              "data":{
-                "body":{
-                  "contents":[
-                    {},{},{},
-                    {
-                      "text":"Junior Test Engineer"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name":"test1",
-              "data":{
-                "body":{
-                  "contents":[
-                    {},{},{},
-                    {
-                      "text":"Junior Test Engineer"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name":"test1",
-              "data":{
-                "body":{
-                  "contents":[
-                    {},{},{},
-                    {
-                      "text":"Junior Test Engineer"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name":"test1",
-              "data":{
-                "body":{
-                  "contents":[
-                    {},{},{},
-                    {
-                      "text":"Junior Test Engineer"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name":"test1",
-              "data":{
-                "body":{
-                  "contents":[
-                    {},{},{},
-                    {
-                      "text":"Junior Test Engineer"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name":"test1",
-              "data":{
-                "body":{
-                  "contents":[
-                    {},{},{},
-                    {
-                      "text":"Junior Test Engineer"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name":"test1",
-              "data":{
-                "body":{
-                  "contents":[
-                    {},{},{},
-                    {
-                      "text":"Junior Test Engineer"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name":"test1",
-              "data":{
-                "body":{
-                  "contents":[
-                    {},{},{},
-                    {
-                      "text":"Junior Test Engineer"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name":"test1",
-              "data":{
-                "body":{
-                  "contents":[
-                    {},{},{},
-                    {
-                      "text":"Junior Test Engineer"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name":"test1",
-              "data":{
-                "body":{
-                  "contents":[
-                    {},{},{},
-                    {
-                      "text":"Junior Test Engineer"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name":"test1",
-              "data":{
-                "body":{
-                  "contents":[
-                    {},{},{},
-                    {
-                      "text":"Junior Test Engineer"
-                    }
-                  ]
-                }
-              }
-            }
     ]
 }

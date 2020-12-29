@@ -34,7 +34,7 @@ module.exports = {
         }
     },
     mounted(){
-        if(confirm("DEBUG模式:是否使用Line開啟"))
+        if(confirm("DEBUG: 是否使用Line開啟"))
             this.init();        
         else
             this.styleTest();

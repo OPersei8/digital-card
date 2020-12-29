@@ -59,7 +59,7 @@ module.exports = {
                     liffId: "1655456623-oxjPwXjM"
                 })
                 .then(() => {
-                    // const accessToken = window.liff.getAccessToken();
+                    const accessToken = window.liff.getAccessToken();
                     if(!liff.isLoggedIn()){
                         liff.login();
                     }

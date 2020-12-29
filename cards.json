@@ -35,7 +35,12 @@
                   "margin": "md",
                   "offsetTop": "-125px",
                   "align": "start",
-                  "offsetStart": "40px"
+                  "offsetStart": "40px",
+                  "action": {
+                    "type": "uri",
+                    "label": "action",
+                    "uri": "https://opersei8.github.io/digital-card/vcard/Hansonyu.vcf"
+                  }
                 },
                 {
                   "type": "text",

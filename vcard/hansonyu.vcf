@@ -1,0 +1,7 @@
+BEGIN:VCARD
+VERSION:3.0
+N:凡;于
+FN:于 凡
+EMAIL;TYPE=INTERNET:test@brotontech.com
+TEL;TYPE=voice,cell,pref:0912345678
+END:VCARD

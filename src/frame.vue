@@ -73,7 +73,7 @@ module.exports = {
                         })
                     .catch((err) => {
                         this.msg = err;
-                        alert(err.code, err.message);
+                        console.log(err.code, err.message);
                     });
                 })
             .catch((LiffError) => {

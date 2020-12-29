@@ -25,7 +25,9 @@
                       "type": "image",
                       "url": "https://opersei8.github.io/digital-card/QRCodes/Hansonyu.jpg",
                       "align": "end",
-                      "offsetTop": "-22px"
+                      "offsetTop": "-20px",
+                      "size": "xxl",
+                      "offsetStart": "20px"
                     },
                     {
                       "type": "text",
@@ -33,9 +35,9 @@
                       "weight": "bold",
                       "size": "3xl",
                       "margin": "md",
-                      "offsetTop": "-125px",
+                      "offsetTop": "-145px",
                       "align": "start",
-                      "offsetStart": "40px",
+                      "offsetStart": "15px",
                       "action": {
                         "type": "uri",
                         "label": "action",
@@ -45,14 +47,14 @@
                     {
                       "type": "text",
                       "text": "Hanson Yu",
-                      "offsetStart": "45px",
-                      "offsetTop": "-125px"
+                      "offsetStart": "20px",
+                      "offsetTop": "-145px"
                     },
                     {
                       "type": "text",
                       "text": "Junior Front End Developer",
-                      "offsetStart": "45px",
-                      "offsetTop": "-125px"
+                      "offsetStart": "20px",
+                      "offsetTop": "-145px"
                     },
                     {
                       "type": "text",
@@ -101,12 +103,7 @@
                       "type": "text",
                       "text": "+886-2-2559-5059",
                       "offsetStart": "55px",
-                      "offsetTop": "-162px",
-                      "action": {
-                        "type": "uri",
-                        "label": "action",
-                        "uri": "tel:0912345678"
-                      }
+                      "offsetTop": "-162px"
                     },
                     {
                       "type": "text",
@@ -183,7 +180,7 @@
                       "offsetEnd": "10px"
                     }
                   ],
-                  "height": "280px"
+                  "height": "330px"
                 },
                 "styles": {
                   "footer": {

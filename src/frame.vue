@@ -92,6 +92,7 @@ module.exports = {
             }
         },
         sendCard(val){
+            console.log(val);
             // var messages = JSON.parse(this.cards[0]);
             if (liff.isApiAvailable('shareTargetPicker')) {
                 liff.shareTargetPicker([

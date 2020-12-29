@@ -23,7 +23,7 @@
               "contents": [
                 {
                   "type": "image",
-                  "url": "/QRCodes/Hansonyu.jpg",
+                  "url": "https://testing.brotontech.com/vouchersui/img/vcard03.png",
                   "align": "end",
                   "offsetTop": "-22px"
                 },

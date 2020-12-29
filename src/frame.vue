@@ -34,13 +34,7 @@ module.exports = {
         }
     },
     mounted(){
-        // this.checkLogin().then(()=>this.init());
-        this.init();        
-
-        // if(confirm("DEBUG: 是否使用Line開啟"))
-        //     this.init();        
-        // else
-        //     this.styleTest();
+        this.init();
     },
     methods:{
         styleTest(){

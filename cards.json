@@ -27,7 +27,12 @@
                       "align": "end",
                       "offsetTop": "-20px",
                       "size": "xxl",
-                      "offsetStart": "20px"
+                      "offsetStart": "20px",
+                      "action": {
+                        "type": "uri",
+                        "label": "action",
+                        "uri": "https://line.me/ti/p/Lhs-DoMMMN"
+                      }
                     },
                     {
                       "type": "text",

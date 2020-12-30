@@ -7,7 +7,7 @@
             </div>
         </div>
         <div>發送同事名片:</div>
-        <div v-if="ready" class="card-container">
+        <div v-if="ready&&cardReady" class="card-container">
             <div v-for="card in cards" :key="card.index" class="card">
                 <div class="card-info">
                     <div>{{card.name}}</div>
@@ -28,6 +28,7 @@ module.exports = {
             line_userid:"",
             line_username:"",
             ready:false,
+            cardReady:false,
             cards:undefined,
             hasCard:false,
             myCard:undefined
@@ -83,7 +84,10 @@ module.exports = {
             });
             fetch('./cards.json')
             .then(res=>res.json())
-            .then(data=>this.cards=data.data)
+            .then(data=>{
+                this.cards=data.data;
+                this.cardReady = true;
+            })
         },
         checkHasCard(){
             if(this.cards.some(emt=>emt.name == this.line_username)){

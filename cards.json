@@ -22,149 +22,188 @@
                   "layout": "vertical",
                   "contents": [
                     {
-                      "type": "image",
-                      "url": "https://opersei8.github.io/digital-card/QRCodes/Hansonyu.jpg",
-                      "align": "end",
-                      "offsetTop": "-20px",
-                      "size": "xxl",
-                      "offsetStart": "20px",
-                      "action": {
-                        "type": "uri",
-                        "label": "action",
-                        "uri": "https://line.me/ti/p/Lhs-DoMMMN"
-                      }
+                      "type": "box",
+                      "layout": "horizontal",
+                      "contents": [
+                        {
+                          "type": "box",
+                          "layout": "vertical",
+                          "contents": [
+                            {
+                              "type": "text",
+                              "text": "于凡",
+                              "weight": "bold",
+                              "size": "3xl",
+                              "margin": "none",
+                              "action": {
+                                "type": "uri",
+                                "label": "action",
+                                "uri": "https://opersei8.github.io/digital-card/vcard/hansonyu.vcf"
+                              },
+                              "gravity": "top",
+                              "align": "start",
+                              "position": "relative"
+                            },
+                            {
+                              "type": "text",
+                              "text": "Hanson Yu"
+                            },
+                            {
+                              "type": "text",
+                              "text": "Junior Front End Developer"
+                            }
+                          ],
+                          "flex": 2
+                        },
+                        {
+                          "type": "image",
+                          "url": "https://opersei8.github.io/digital-card/QRCodes/Hansonyu.jpg",
+                          "size": "5xl",
+                          "action": {
+                            "type": "uri",
+                            "label": "action",
+                            "uri": "https://line.me/ti/p/Lhs-DoMMMN"
+                          },
+                          "margin": "none",
+                          "flex": 1
+                        }
+                      ]
                     },
                     {
-                      "type": "text",
-                      "text": "于凡",
-                      "weight": "bold",
-                      "size": "3xl",
-                      "margin": "md",
-                      "offsetTop": "-145px",
-                      "align": "start",
-                      "offsetStart": "15px",
-                      "action": {
-                        "type": "uri",
-                        "label": "action",
-                        "uri": "https://opersei8.github.io/digital-card/vcard/hansonyu.vcf"
-                      }
-                    },
-                    {
-                      "type": "text",
-                      "text": "Hanson Yu",
-                      "offsetStart": "20px",
-                      "offsetTop": "-145px"
-                    },
-                    {
-                      "type": "text",
-                      "text": "Junior Front End Developer",
-                      "offsetStart": "20px",
-                      "offsetTop": "-145px"
-                    },
-                    {
-                      "type": "text",
-                      "text": "地址:",
-                      "offsetStart": "10px",
-                      "weight": "bold",
-                      "offsetTop": "-100px"
-                    },
-                    {
-                      "type": "text",
-                      "text": "10349 台北市大同區鄭州路87號7樓",
-                      "offsetStart": "55px",
-                      "offsetTop": "-122px",
-                      "action": {
-                        "type": "uri",
-                        "label": "action",
-                        "uri": "tel:0912345678"
-                      }
-                    },
-                    {
-                      "type": "text",
-                      "text": "電話:",
-                      "offsetStart": "10px",
-                      "weight": "bold",
-                      "offsetTop": "-120px"
-                    },
-                    {
-                      "type": "text",
-                      "text": "+886-2-2388-2880#12",
-                      "offsetStart": "55px",
-                      "offsetTop": "-142px",
-                      "action": {
-                        "type": "uri",
-                        "label": "action",
-                        "uri": "tel:0912345678"
-                      }
-                    },
-                    {
-                      "type": "text",
-                      "text": "傳真:",
-                      "offsetStart": "10px",
-                      "weight": "bold",
-                      "offsetTop": "-140px"
-                    },
-                    {
-                      "type": "text",
-                      "text": "+886-2-2559-5059",
-                      "offsetStart": "55px",
-                      "offsetTop": "-162px"
-                    },
-                    {
-                      "type": "text",
-                      "text": "手機:",
-                      "offsetStart": "10px",
-                      "weight": "bold",
-                      "offsetTop": "-160px"
-                    },
-                    {
-                      "type": "text",
-                      "text": "+886-935-224-663",
-                      "offsetStart": "55px",
-                      "offsetTop": "-182px",
-                      "color": "#1B52C9",
-                      "action": {
-                        "type": "uri",
-                        "label": "action",
-                        "uri": "tel:0912345678"
-                      }
-                    },
-                    {
-                      "type": "text",
-                      "text": "郵箱:",
-                      "offsetStart": "10px",
-                      "weight": "bold",
-                      "offsetTop": "-180px"
-                    },
-                    {
-                      "type": "text",
-                      "text": "hansonyu@brotontech.com",
-                      "offsetStart": "55px",
-                      "offsetTop": "-202px",
-                      "color": "#1B52C9",
-                      "action": {
-                        "type": "uri",
-                        "label": "action",
-                        "uri": "mailto:hansonyu@brotontech.com"
-                      }
-                    },
-                    {
-                      "type": "text",
-                      "text": "統編:",
-                      "offsetStart": "10px",
-                      "weight": "bold",
-                      "offsetTop": "-200px"
-                    },
-                    {
-                      "type": "text",
-                      "text": "42835355",
-                      "offsetStart": "55px",
-                      "offsetTop": "-222px",
-                      "action": {
-                        "type": "uri",
-                        "label": "action",
-                        "uri": "tel:0912345678"
-                      }
+                      "type": "box",
+                      "layout": "vertical",
+                      "contents": [
+                        {
+                          "type": "box",
+                          "layout": "horizontal",
+                          "contents": [
+                            {
+                              "type": "text",
+                              "text": "地址:",
+                              "weight": "bold",
+                              "align": "start",
+                              "flex": 1
+                            },
+                            {
+                              "type": "text",
+                              "text": "10349 台北市大同區鄭州路87號7樓",
+                              "action": {
+                                "type": "uri",
+                                "label": "action",
+                                "uri": "tel:0912345678"
+                              },
+                              "flex": 5
+                            }
+                          ]
+                        },
+                        {
+                          "type": "box",
+                          "layout": "horizontal",
+                          "contents": [
+                            {
+                              "type": "text",
+                              "text": "電話:",
+                              "weight": "bold",
+                              "flex": 1
+                            },
+                            {
+                              "type": "text",
+                              "text": "+886-2-2388-2880#12",
+                              "action": {
+                                "type": "uri",
+                                "label": "action",
+                                "uri": "tel:0912345678"
+                              },
+                              "flex": 5
+                            }
+                          ]
+                        },
+                        {
+                          "type": "box",
+                          "layout": "horizontal",
+                          "contents": [
+                            {
+                              "type": "text",
+                              "text": "傳真:",
+                              "weight": "bold",
+                              "flex": 1
+                            },
+                            {
+                              "type": "text",
+                              "text": "+886-2-2559-5059",
+                              "flex": 5
+                            }
+                          ]
+                        },
+                        {
+                          "type": "box",
+                          "layout": "horizontal",
+                          "contents": [
+                            {
+                              "type": "text",
+                              "text": "手機:",
+                              "weight": "bold",
+                              "flex": 1
+                            },
+                            {
+                              "type": "text",
+                              "text": "+886-935-224-663",
+                              "color": "#1B52C9",
+                              "action": {
+                                "type": "uri",
+                                "label": "action",
+                                "uri": "tel:0912345678"
+                              },
+                              "flex": 5
+                            }
+                          ]
+                        },
+                        {
+                          "type": "box",
+                          "layout": "horizontal",
+                          "contents": [
+                            {
+                              "type": "text",
+                              "text": "郵箱:",
+                              "weight": "bold",
+                              "flex": 1
+                            },
+                            {
+                              "type": "text",
+                              "text": "hansonyu@brotontech.com",
+                              "color": "#1B52C9",
+                              "action": {
+                                "type": "uri",
+                                "label": "action",
+                                "uri": "mailto:hansonyu@brotontech.com"
+                              },
+                              "flex": 5
+                            }
+                          ]
+                        },
+                        {
+                          "type": "box",
+                          "layout": "horizontal",
+                          "contents": [
+                            {
+                              "type": "text",
+                              "text": "統編:",
+                              "weight": "bold",
+                              "flex": 1
+                            },
+                            {
+                              "type": "text",
+                              "text": "42835355",
+                              "action": {
+                                "type": "uri",
+                                "label": "action",
+                                "uri": "tel:0912345678"
+                              },
+                              "flex": 5
+                            }
+                          ]
+                        }
+                      ]
                     },
                     {
                       "type": "button",
@@ -185,7 +224,8 @@
                       "offsetEnd": "10px"
                     }
                   ],
-                  "height": "330px"
+                  "height": "330px",
+                  "margin": "none"
                 },
                 "styles": {
                   "footer": {

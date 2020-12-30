@@ -46,16 +46,16 @@ module.exports = {
                 this.ready=true;
                 this.checkHasCard();
             })    
-            this.line_username = "于凡";	
-            
+            this.line_username = "于凡";	            
         },
         checkLogin(){
             return new Promise((resolve,reject)=>{
 
             })
         },
+
         async init(){
-             window.liff
+            await window.liff
                 .init({
                     liffId: "1655456623-oxjPwXjM"
                 })
@@ -68,9 +68,14 @@ module.exports = {
                     window.liff.getProfile()
                         .then(profile => {
                             this.line_userid = profile.userId;
-                            this.line_username = profile.displayName;	
-                            this.checkHasCard();
-                            this.ready=true;				
+                            this.line_username = profile.displayName;
+                            fetch('./cards.json')
+                            .then(res=>res.json())
+                            .then(data=>{
+                                this.cards=data.data;
+                                this.cardReady = true;
+                                this.checkHasCard();
+                            })
                         })
                     .catch((err) => {
                         this.msg = err;
@@ -82,12 +87,6 @@ module.exports = {
                 // alert(LiffError.code, LiffError.message);
                 liff.login()
             });
-            fetch('./cards.json')
-            .then(res=>res.json())
-            .then(data=>{
-                this.cards=data.data;
-                this.cardReady = true;
-            })
         },
         checkHasCard(){
             if(this.cards.some(emt=>emt.name == this.line_username)){

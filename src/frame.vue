@@ -93,6 +93,7 @@ module.exports = {
                 this.cards.find(emt => this.myCard = emt.data);
                 this.hasCard = true;
             }
+            this.ready=true;
         },
         sendCard(val){
             console.log(val);

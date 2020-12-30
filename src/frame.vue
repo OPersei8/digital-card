@@ -41,7 +41,7 @@ module.exports = {
             fetch('./cards.json')
             .then(res=>res.json())
             .then(data=>{
-                this.cards=data.data;
+                this.cards=data;
                 this.ready=true;
                 this.checkHasCard();
             })    

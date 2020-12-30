@@ -11,7 +11,7 @@
             <div v-for="card in cards" :key="card.index" class="card">
                 <div class="card-info">
                     <div>{{card.name}}</div>
-                    <div>職稱:{{card.data.body.contents[0].contents[0].contents[2].text}}</div>
+                    <div>職稱:{{card.data.body.contents[0].contents[1].contents[2].text}}</div>
                 </div>
                 <button class="card-send" @click="sendCard(card.data)">發送名片</button>
             </div>

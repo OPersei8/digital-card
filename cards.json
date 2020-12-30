@@ -1,1 +1,255 @@
-{"data":[{"name":"大哥","data":{"type":"bubble","size":"giga","direction":"ltr","hero":{"type":"image","url":"https://testing.brotontech.com/vouchersui/img/logo_ac.png","action":{"type":"uri","label":"action","uri":"https://www.brotontech.com/"},"size":"full","aspectRatio":"3:1"},"body":{"type":"box","layout":"vertical","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"spacer","size":"xxl"},{"type":"box","layout":"vertical","contents":[{"type":"text","text":"大哥","weight":"bold","size":"3xl","margin":"none","action":{"type":"uri","label":"action","uri":"https://opersei8.github.io/digital-card/vcard/hansonyu.vcf"},"gravity":"top","align":"start","position":"relative","offsetStart":"10px"},{"type":"text","text":"Big Brother","offsetStart":"15px"},{"type":"text","text":"THE Brother","offsetStart":"15px"}],"flex":2,"alignItems":"flex-start","justifyContent":"center"},{"type":"image","url":"https://opersei8.github.io/digital-card/QRCodes/Hansonyu.jpg","size":"5xl","action":{"type":"uri","label":"action","uri":"https://line.me/ti/p/Lhs-DoMMMN"},"margin":"none","flex":1,"align":"center"}],"margin":"none","flex":1},{"type":"box","layout":"vertical","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"text","text":"地址:","weight":"bold","align":"start","flex":1},{"type":"text","text":"10349 台北市大同區鄭州路87號7樓","flex":5}]},{"type":"box","layout":"horizontal","contents":[{"type":"text","text":"電話:","weight":"bold","flex":1},{"type":"text","text":"+886-2-2388-2880#100","action":{"type":"uri","label":"action","uri":"tel:0223882880"},"flex":5}]},{"type":"box","layout":"horizontal","contents":[{"type":"text","text":"傳真:","weight":"bold","flex":1},{"type":"text","text":"+886-2-2559-5059","flex":5}]},{"type":"box","layout":"horizontal","contents":[{"type":"text","text":"手機:","weight":"bold","flex":1},{"type":"text","text":"+886-987-654-321","color":"#1B52C9","action":{"type":"uri","label":"action","uri":"tel:0987654321"},"flex":5}]},{"type":"box","layout":"horizontal","contents":[{"type":"text","text":"郵箱:","weight":"bold","flex":1},{"type":"text","text":"THEBIGBROTHER@brotontech.com","color":"#1B52C9","action":{"type":"uri","label":"action","uri":"mailto:THEBIGBROTHER@brotontech.com"},"flex":5}]},{"type":"box","layout":"horizontal","contents":[{"type":"text","text":"統編:","weight":"bold","flex":1},{"type":"text","text":"42835355","flex":5}]}],"flex":1},{"type":"button","action":{"type":"uri","label":"分享","uri":"https://liff.line.me/1655456623-oxjPwXjM"},"position":"absolute","gravity":"bottom","adjustMode":"shrink-to-fit","color":"#000000","style":"link","margin":"xs","height":"sm","offsetBottom":"10px","offsetEnd":"10px"}],"height":"330px","margin":"none"},"styles":{"hero":{"separator":false},"footer":{"separator":true}}}},{"name":"大哥","data":{"type":"bubble","size":"giga","direction":"ltr","hero":{"type":"image","url":"https://testing.brotontech.com/vouchersui/img/logo_ac.png","action":{"type":"uri","label":"action","uri":"https://www.brotontech.com/"},"size":"full","aspectRatio":"3:1"},"body":{"type":"box","layout":"vertical","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"spacer","size":"xxl"},{"type":"box","layout":"vertical","contents":[{"type":"text","text":"大哥","weight":"bold","size":"3xl","margin":"none","action":{"type":"uri","label":"action","uri":"https://opersei8.github.io/digital-card/vcard/hansonyu.vcf"},"gravity":"top","align":"start","position":"relative","offsetStart":"10px"},{"type":"text","text":"Big Brother","offsetStart":"15px"},{"type":"text","text":"THE Brother","offsetStart":"15px"}],"flex":2,"alignItems":"flex-start","justifyContent":"center"},{"type":"image","url":"https://opersei8.github.io/digital-card/QRCodes/Hansonyu.jpg","size":"5xl","action":{"type":"uri","label":"action","uri":"https://line.me/ti/p/Lhs-DoMMMN"},"margin":"none","flex":1,"align":"center"}],"margin":"none","flex":1},{"type":"box","layout":"vertical","contents":[{"type":"box","layout":"horizontal","contents":[{"type":"text","text":"地址:","weight":"bold","align":"start","flex":1},{"type":"text","text":"10349 台北市大同區鄭州路87號7樓","flex":5}]},{"type":"box","layout":"horizontal","contents":[{"type":"text","text":"電話:","weight":"bold","flex":1},{"type":"text","text":"+886-2-2388-2880#100","action":{"type":"uri","label":"action","uri":"tel:0223882880"},"flex":5}]},{"type":"box","layout":"horizontal","contents":[{"type":"text","text":"傳真:","weight":"bold","flex":1},{"type":"text","text":"+886-2-2559-5059","flex":5}]},{"type":"box","layout":"horizontal","contents":[{"type":"text","text":"手機:","weight":"bold","flex":1},{"type":"text","text":"+886-987-654-321","color":"#1B52C9","action":{"type":"uri","label":"action","uri":"tel:0987654321"},"flex":5}]},{"type":"box","layout":"horizontal","contents":[{"type":"text","text":"郵箱:","weight":"bold","flex":1},{"type":"text","text":"THEBIGBROTHER@brotontech.com","color":"#1B52C9","action":{"type":"uri","label":"action","uri":"mailto:THEBIGBROTHER@brotontech.com"},"flex":5}]},{"type":"box","layout":"horizontal","contents":[{"type":"text","text":"統編:","weight":"bold","flex":1},{"type":"text","text":"42835355","flex":5}]}],"flex":1},{"type":"button","action":{"type":"uri","label":"分享","uri":"https://liff.line.me/1655456623-oxjPwXjM"},"position":"absolute","gravity":"bottom","adjustMode":"shrink-to-fit","color":"#000000","style":"link","margin":"xs","height":"sm","offsetBottom":"10px","offsetEnd":"10px"}],"height":"330px","margin":"none"},"styles":{"hero":{"separator":false},"footer":{"separator":true}}}}]}
+{
+"data":
+  [
+  {
+    "name":"于凡",
+    "data":
+    {
+      "type": "bubble",
+      "size": "giga",
+      "direction": "ltr",
+      "hero": {
+        "type": "image",
+        "url": "https://testing.brotontech.com/vouchersui/img/logo_ac.png",
+        "action": {
+          "type": "uri",
+          "label": "action",
+          "uri": "https://www.brotontech.com/"
+        },
+        "size": "full",
+        "aspectRatio": "3:1"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "contents": [
+              {
+                "type": "spacer",
+                "size": "xxl"
+              },
+              {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "于凡",
+                    "weight": "bold",
+                    "size": "3xl",
+                    "margin": "none",
+                    "action": {
+                      "type": "uri",
+                      "label": "action",
+                      "uri": "https://opersei8.github.io/digital-card/vcard/hansonyu.vcf"
+                    },
+                    "gravity": "top",
+                    "align": "start",
+                    "position": "relative",
+                    "offsetStart": "10px"
+                  },
+                  {
+                    "type": "text",
+                    "text": "Hanson Yu",
+                    "offsetStart": "15px"
+                  },
+                  {
+                    "type": "text",
+                    "text": "Junior Front End Developer",
+                    "offsetStart": "15px"
+                  }
+                ],
+                "flex": 2,
+                "alignItems": "flex-start",
+                "justifyContent": "center"
+              },
+              {
+                "type": "image",
+                "url": "https://opersei8.github.io/digital-card/QRCodes/Hansonyu.jpg",
+                "size": "5xl",
+                "action": {
+                  "type": "uri",
+                  "label": "action",
+                  "uri": "https://line.me/ti/p/Lhs-DoMMMN"
+                },
+                "margin": "none",
+                "flex": 1,
+                "align": "center"
+              }
+            ],
+            "margin": "none",
+            "flex": 1
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "地址:",
+                    "weight": "bold",
+                    "align": "start",
+                    "flex": 1
+                  },
+                  {
+                    "type": "text",
+                    "text": "10349 台北市大同區鄭州路87號7樓",
+                    "action": {
+                      "type": "uri",
+                      "label": "action",
+                      "uri": "tel:0912345678"
+                    },
+                    "flex": 5
+                  }
+                ]
+              },
+              {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "電話:",
+                    "weight": "bold",
+                    "flex": 1
+                  },
+                  {
+                    "type": "text",
+                    "text": "+886-2-2388-2880#12",
+                    "action": {
+                      "type": "uri",
+                      "label": "action",
+                      "uri": "tel:0912345678"
+                    },
+                    "flex": 5
+                  }
+                ]
+              },
+              {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "傳真:",
+                    "weight": "bold",
+                    "flex": 1
+                  },
+                  {
+                    "type": "text",
+                    "text": "+886-2-2559-5059",
+                    "flex": 5
+                  }
+                ]
+              },
+              {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "手機:",
+                    "weight": "bold",
+                    "flex": 1
+                  },
+                  {
+                    "type": "text",
+                    "text": "+886-935-224-663",
+                    "color": "#1B52C9",
+                    "action": {
+                      "type": "uri",
+                      "label": "action",
+                      "uri": "tel:0912345678"
+                    },
+                    "flex": 5
+                  }
+                ]
+              },
+              {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "郵箱:",
+                    "weight": "bold",
+                    "flex": 1
+                  },
+                  {
+                    "type": "text",
+                    "text": "hansonyu@brotontech.com",
+                    "color": "#1B52C9",
+                    "action": {
+                      "type": "uri",
+                      "label": "action",
+                      "uri": "mailto:hansonyu@brotontech.com"
+                    },
+                    "flex": 5
+                  }
+                ]
+              },
+              {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "統編:",
+                    "weight": "bold",
+                    "flex": 1
+                  },
+                  {
+                    "type": "text",
+                    "text": "42835355",
+                    "action": {
+                      "type": "uri",
+                      "label": "action",
+                      "uri": "tel:0912345678"
+                    },
+                    "flex": 5
+                  }
+                ]
+              }
+            ],
+            "flex": 1
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "分享",
+              "uri": "https://liff.line.me/1655456623-oxjPwXjM"
+            },
+            "position": "absolute",
+            "gravity": "bottom",
+            "adjustMode": "shrink-to-fit",
+            "color": "#000000",
+            "style": "link",
+            "margin": "xs",
+            "height": "sm",
+            "offsetBottom": "10px",
+            "offsetEnd": "10px"
+          }
+        ],
+        "height": "330px",
+        "margin": "none"
+      },
+      "styles": {
+        "hero": {
+          "separator": false
+        },
+        "footer": {
+          "separator": true
+        }
+      }
+    }
+  }
+  ]
+}

@@ -48,15 +48,18 @@
                     },
                     "gravity": "top",
                     "align": "start",
-                    "position": "relative"
+                    "position": "relative",
+                    "offsetStart": "10px"
                   },
                   {
                     "type": "text",
-                    "text": "Hanson Yu"
+                    "text": "Hanson Yu",
+                    "offsetStart": "15px"
                   },
                   {
                     "type": "text",
-                    "text": "Junior Front End Developer"
+                    "text": "Junior Front End Developer",
+                    "offsetStart": "15px"
                   }
                 ],
                 "flex": 2,

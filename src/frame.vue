@@ -42,6 +42,7 @@ module.exports = {
     },
     mounted(){
         let urlParams = new URLSearchParams(window.location.search);
+        debugger;
         if(urlParams.has('name'))
             this.init(urlParams.get('name'));        
         else{
@@ -50,51 +51,8 @@ module.exports = {
         }
     },
     methods:{
-        styleTest(){
-            fetch('./cards.json')
-            .then(res=>res.json())
-            .then(data=>{
-                this.cards=data.data;
-                this.ready=true;
-                this.checkHasCard();
-            })    
-            this.line_username = "于凡";	            
-        },
-        checkLogin(){
-            return new Promise((resolve,reject)=>{
-                
-            })
-        },
-
-        // async directShare(val){
-        //     await window.liff
-        //         .init({
-        //             liffId: "1655456623-oxjPwXjM"
-        //         })
-        //         .then(() => {
-        //             if (!liff.isLoggedIn()) {
-        //                 liff.login({ redirectUri: `https://opersei8.github.io/digital-card/?name=${val}` });
-        //                 // Verify that the domain name and path (https://example.com/path) match the endpoint URL.
-        //             }
-
-        //             this.debug="success"
-        //             this.getCard()
-        //             .then(()=>{
-        //                 this.debug=val;
-        //                 this.sendCard(this.cards.find(emt=>emt.name == val).data)
-        //                 .then(res=>{
-        //                     window.close();
-        //                     liff.closeWindow();
-        //                 })
-        //             })
-        //         })
-        //     .catch((LiffError) => {
-        //         this.debug="fail"
-        //     });
-        // },
-
-        async init(val){
-            await window.liff
+        init(val){
+            window.liff
                 .init({
                     liffId: "1655456623-oxjPwXjM"
                 })
@@ -139,6 +97,7 @@ module.exports = {
                     this.close();
                 });
         },
+
         getCard(){
             return new Promise((resolve,reject)=>{
                 fetch('./cards.json')
@@ -150,6 +109,7 @@ module.exports = {
                 });
             })
         },
+
         checkHasCard(){
             if(this.cards.some(emt=>emt.name == this.line_username)){
                 this.cards.find(emt => this.myCard = emt.data);
@@ -157,6 +117,7 @@ module.exports = {
             }
             this.ready=true;
         },
+
         sendCard(val){
             return new Promise((resolve,reject)=>{
                 if (liff.isApiAvailable('shareTargetPicker')) {
@@ -174,6 +135,7 @@ module.exports = {
                 }
             })
         },
+
         close(){
             window.close();
             liff.closeWindow();

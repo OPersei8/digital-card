@@ -74,7 +74,7 @@ module.exports = {
                     .then(()=>{
                         console.log(this.cards.find(emt=>emt.name == urlParams.get('name')).data);
                         this.sendCard(this.cards.find(emt=>emt.name == urlParams.get('name')).data);
-                        window.close();
+                        // window.close();
                     })
                 })
             .catch((LiffError) => {

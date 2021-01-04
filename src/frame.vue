@@ -37,6 +37,7 @@ module.exports = {
     },
     mounted(){
         let urlParams = new URLSearchParams(window.location.search);
+        this.debug="first";
         if(urlParams.has('name')){
             this.init2();
             this.debug=urlParams.get('name');

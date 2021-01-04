@@ -37,15 +37,14 @@ module.exports = {
         }
     },
     mounted(){
-        let urlParams = new URLSearchParams(window.location.search);
-        this.debug="first";
-        if(urlParams.has('name')){
-            this.init2(urlParams.get('name'));
-            this.debug=urlParams.get('name');
-
-        }
-        else
-            this.init(urlParams.get('name'));
+        // let urlParams = new URLSearchParams(window.location.search);
+        // this.debug="first";
+        // if(urlParams.has('name')){
+        //     this.init2(urlParams.get('name'));
+        //     this.debug=urlParams.get('name');
+        // }
+        // else
+        //     this.init(urlParams.get('name'));
     },
     methods:{
         styleTest(){

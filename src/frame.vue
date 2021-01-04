@@ -42,7 +42,7 @@ module.exports = {
         }
     },
     mounted(){
-        debugger;
+        
         this.init();
         let urlParams = new URLSearchParams(window.location.search);
         if(urlParams.has('name')){
@@ -62,7 +62,7 @@ module.exports = {
                 })
                 .then(() => {
                     if(!liff.isLoggedIn())
-                        liff.login();
+                        liff.login({ redirectUri: window.location.href });
                 })
                 .catch((LiffError) => {
                     this.close();

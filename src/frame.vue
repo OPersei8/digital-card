@@ -33,18 +33,15 @@ module.exports = {
             cards:undefined,
             hasCard:false,
             myCard:undefined,
-            debug:""
+            debug:"",
         }
     },
     mounted(){
-        // let urlParams = new URLSearchParams(window.location.search);
-        // this.debug="first";
-        // if(urlParams.has('name')){
-        //     this.init2(urlParams.get('name'));
-        //     this.debug=urlParams.get('name');
-        // }
-        // else
-        //     this.init(urlParams.get('name'));
+        let urlParams = new URLSearchParams(window.location.search);
+        if(urlParams.has('name'))
+            this.init(urlParams.get('name'));        
+        else
+            this.init();
     },
     methods:{
         styleTest(){
@@ -63,32 +60,32 @@ module.exports = {
             })
         },
 
-        async init2(val){
-            await window.liff
-                .init({
-                    liffId: "1655456623-oxjPwXjM"
-                })
-                .then(() => {
-                    if (!liff.isLoggedIn()) {
-                        liff.login({ redirectUri: `https://opersei8.github.io/digital-card/?name=${val}` });
-                        // Verify that the domain name and path (https://example.com/path) match the endpoint URL.
-                    }
+        // async directShare(val){
+        //     await window.liff
+        //         .init({
+        //             liffId: "1655456623-oxjPwXjM"
+        //         })
+        //         .then(() => {
+        //             if (!liff.isLoggedIn()) {
+        //                 liff.login({ redirectUri: `https://opersei8.github.io/digital-card/?name=${val}` });
+        //                 // Verify that the domain name and path (https://example.com/path) match the endpoint URL.
+        //             }
 
-                    this.debug="success"
-                    this.getCard()
-                    .then(()=>{
-                        this.debug=val;
-                        this.sendCard(this.cards.find(emt=>emt.name == val).data)
-                        .then(res=>{
-                            window.close();
-                            liff.closeWindow();
-                        })
-                    })
-                })
-            .catch((LiffError) => {
-                this.debug="fail"
-            });
-        },
+        //             this.debug="success"
+        //             this.getCard()
+        //             .then(()=>{
+        //                 this.debug=val;
+        //                 this.sendCard(this.cards.find(emt=>emt.name == val).data)
+        //                 .then(res=>{
+        //                     window.close();
+        //                     liff.closeWindow();
+        //                 })
+        //             })
+        //         })
+        //     .catch((LiffError) => {
+        //         this.debug="fail"
+        //     });
+        // },
 
         async init(val){
             await window.liff
@@ -96,15 +93,27 @@ module.exports = {
                     liffId: "1655456623-oxjPwXjM"
                 })
                 .then(() => {
-                    if(!liff.isLoggedIn()){
-                        if(val)
-                            liff.login({ redirectUri: `https://opersei8.github.io/digital-card/share?name=${val}` });
-                        else
-                            liff.login();
+                    if(val){
+                        if(!liff.isLoggedIn()){
+                                liff.login({ redirectUri: `https://opersei8.github.io/digital-card/?name=${val}` });
+                        }
+                        this.getCard()
+                        .then(()=>{
+                            this.debug=val;
+                            this.sendCard(this.cards.find(emt=>emt.name == val).data)
+                            .then(res=>{
+                                this.close();
+                            })
+                            .catch(err=>{
+                                alert('錯誤')
+                                this.close();
+                            })
+                        })
                     }
-                    const accessToken = window.liff.getAccessToken();
-                    // Start to use liff's api
-                    window.liff.getProfile()
+                    else{
+                        if(!liff.isLoggedIn())
+                            liff.login();
+                        window.liff.getProfile()
                         .then(profile => {
                             this.line_userid = profile.userId;
                             this.line_username = profile.displayName;
@@ -113,24 +122,19 @@ module.exports = {
                                 this.cardReady = true;
                                 this.checkHasCard();
                             })
-                            // fetch('./cards.json')
-                            // .then(res=>res.json())
-                            // .then(data=>{
-                            //     this.cards=data.data;
-                            //     this.cardReady = true;
-                            //     this.checkHasCard();
-                            // })
                         })
-                    .catch((err) => {
-                        this.msg = err;
-                        console.log(err.code, err.message);
-                    });
+                        .catch((err) => {
+                            alert('err');
+                        });
+                        
+                    }
+                    // const accessToken = window.liff.getAccessToken();
+                    // Start to use liff's api
                 })
-            .catch((LiffError) => {
-                // Error happens during initialization
-                // alert(LiffError.code, LiffError.message);
-                liff.login()
-            });
+                .catch((LiffError) => {
+                    alert('錯誤');
+                    this.close();
+                });
         },
         getCard(){
             return new Promise((resolve,reject)=>{

@@ -73,7 +73,10 @@ module.exports = {
                     this.getCard()
                     .then(()=>{
                         this.debug=val;
-                        this.sendCard(this.cards.find(emt=>emt.name == val).data,true);                        
+                        this.sendCard(this.cards.find(emt=>emt.name == val).data,true)
+                        .then(res=>{
+                            console.log("here");
+                        })
                     })
                 })
             .catch((LiffError) => {
@@ -138,27 +141,22 @@ module.exports = {
             }
             this.ready=true;
         },
-        sendCard(val,close){
-            console.log(val);
-            console.log("here2");
-            // var messages = JSON.parse(this.cards[0]);
-            if (liff.isApiAvailable('shareTargetPicker')) {
-                liff.shareTargetPicker([
-                    {
-                    "type": "flex",
-                    "altText": "數位版名片",
-                    "contents": val
-                    }
-                ]).then(status=>{
-                    console.log(status);
-                    if(status=="success"&&close){
-                        console.log("here");
-                        window.close();
-                    }
-                });
-            } else {
-                alert("尚未開啟分享權限");
-            }
+        sendCard(val){
+            return new Promise((resolve,reject)=>{
+                if (liff.isApiAvailable('shareTargetPicker')) {
+                    liff.shareTargetPicker([
+                        {
+                        "type": "flex",
+                        "altText": "數位版名片",
+                        "contents": val
+                        }
+                    ]).then(status=>{
+                        resolve();
+                    });
+                } else {
+                    reject("分享權限未開啟");
+                }
+            })
         }
     }
 }

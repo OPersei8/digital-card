@@ -99,7 +99,7 @@ module.exports = {
                 .then(() => {
                     if(!liff.isLoggedIn()){
                         if(val)
-                            liff.login({ redirectUri: `/share?name=${val}` });
+                            liff.login({ redirectUri: `https://opersei8.github.io/digital-card/share?name=${val}` });
                         else
                             liff.login();
                     }

@@ -29,9 +29,9 @@
                     liffId: "1655456623-oxjPwXjM"
                 })
                 .then(() => {
-                    console.log("here3")
                     if (!liff.isLoggedIn()) {
-                        liff.login({ redirectUri: `/share?name=${val}` });
+                        alert("here");
+                        liff.login({ redirectUri: `https://opersei8.github.io/digital-card/share?name=${val}` });
                         // Verify that the domain name and path (https://example.com/path) match the endpoint URL.
                     }
                     getCard()

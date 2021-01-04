@@ -105,7 +105,6 @@ module.exports = {
                                 this.close();
                             })
                             .catch(err=>{
-                                alert('錯誤')
                                 this.close();
                             })
                         })
@@ -124,7 +123,6 @@ module.exports = {
                             })
                         })
                         .catch((err) => {
-                            alert('err');
                         });
                         
                     }
@@ -132,7 +130,6 @@ module.exports = {
                     // Start to use liff's api
                 })
                 .catch((LiffError) => {
-                    alert('錯誤');
                     this.close();
                 });
         },

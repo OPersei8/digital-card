@@ -75,7 +75,7 @@ module.exports = {
                         this.debug=val;
                         this.sendCard(this.cards.find(emt=>emt.name == val).data,true)
                         .then(res=>{
-                            console.log("here");
+                            window.close();
                         })
                     })
                 })

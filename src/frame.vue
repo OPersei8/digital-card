@@ -73,8 +73,7 @@ module.exports = {
                     this.getCard()
                     .then(()=>{
                         this.debug=val;
-                        this.sendCard(this.cards.find(emt=>emt.name == val).data);
-                        // window.close();
+                        this.sendCard(this.cards.find(emt=>emt.name == val).data,true);                        
                     })
                 })
             .catch((LiffError) => {
@@ -139,7 +138,7 @@ module.exports = {
             }
             this.ready=true;
         },
-        sendCard(val){
+        sendCard(val,close){
             console.log(val);
             // var messages = JSON.parse(this.cards[0]);
             if (liff.isApiAvailable('shareTargetPicker')) {
@@ -150,6 +149,8 @@ module.exports = {
                     "contents": val
                     }
                 ]);
+                if(close)
+                    window.close();
             } else {
                 alert("尚未開啟分享權限");
             }

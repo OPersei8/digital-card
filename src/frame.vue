@@ -38,61 +38,30 @@ module.exports = {
             myCard:undefined,
             debug:"",
             share:true,
+            name:""
         }
     },
     mounted(){
+        this.init();
         let urlParams = new URLSearchParams(window.location.search);
-        if(urlParams.has('name'))
-            this.init(urlParams.get('name'));        
+        if(urlParams.has('name')){
+            this.name=urlParams.get('name');
+            this.shareCard(this.name);
+        }
         else{
             this.share = false;
-            this.init();
+            this.initMyApp();
         }
     },
     methods:{
         init(val){
-            debugger;
             window.liff
                 .init({
                     liffId: "1655456623-oxjPwXjM"
                 })
                 .then(() => {
-                    debugger;
-                    if(val){
-                        if(!liff.isLoggedIn()){
-                                liff.login({ redirectUri: `https://opersei8.github.io/digital-card/?name=${val}` });
-                        }
-                        this.getCard()
-                        .then(()=>{
-                            this.debug=val;
-                            this.sendCard(this.cards.find(emt=>emt.name == val).data)
-                            .then(res=>{
-                                this.close();
-                            })
-                            .catch(err=>{
-                                this.close();
-                            })
-                        })
-                    }
-                    else{
-                        if(!liff.isLoggedIn())
-                            liff.login();
-                        window.liff.getProfile()
-                        .then(profile => {
-                            this.line_userid = profile.userId;
-                            this.line_username = profile.displayName;
-                            this.getCard()
-                            .then(()=>{
-                                this.cardReady = true;
-                                this.checkHasCard();
-                            })
-                        })
-                        .catch((err) => {
-                        });
-                        
-                    }
-                    // const accessToken = window.liff.getAccessToken();
-                    // Start to use liff's api
+                    if(!liff.isLoggedIn())
+                        liff.login();
                 })
                 .catch((LiffError) => {
                     this.close();
@@ -109,6 +78,35 @@ module.exports = {
                     resolve();                    
                 });
             })
+        },
+
+        shareCard(val){
+            this.getCard()
+            .then(()=>{
+                this.sendCard(this.cards.find(emt=>emt.name == val).data)
+                .then(res=>{
+                    this.close();
+                })
+                .catch(err=>{
+                    this.close();
+                })
+            })
+        },
+
+        initMyApp(){
+            window.liff.getProfile()
+            .then(profile => {
+                this.line_userid = profile.userId;
+                this.line_username = profile.displayName;
+                this.getCard()
+                .then(()=>{
+                    this.cardReady = true;
+                    this.checkHasCard();
+                })
+            })
+            .catch((err) => {
+
+            });
         },
 
         checkHasCard(){

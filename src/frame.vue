@@ -95,7 +95,7 @@ module.exports = {
                 .then(() => {
                     if(val){
                         if(!liff.isLoggedIn()){
-                                liff.login({ redirectUri: `https://opersei8.github.io/digital-card/?name=${val}` });
+                                liff.login({ redirectUri: `https://liff.line.me/1655456623-oxjPwXjM/?name=${val}` });
                         }
                         this.getCard()
                         .then(()=>{

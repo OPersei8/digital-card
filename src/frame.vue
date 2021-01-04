@@ -140,6 +140,7 @@ module.exports = {
         },
         sendCard(val,close){
             console.log(val);
+            console.log("here2");
             // var messages = JSON.parse(this.cards[0]);
             if (liff.isApiAvailable('shareTargetPicker')) {
                 liff.shareTargetPicker([
@@ -149,7 +150,7 @@ module.exports = {
                     "contents": val
                     }
                 ]).then(status=>{
-                    console.log(status)
+                    console.log(status);
                     if(status=="success"&&close){
                         console.log("here");
                         window.close();

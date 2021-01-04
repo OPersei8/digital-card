@@ -41,12 +41,7 @@ module.exports = {
         if(urlParams.has('name')){
             this.init2();
             this.debug=urlParams.get('name');
-            this.getCard()
-            .then(()=>{
-                console.log(this.cards.find(emt=>emt.name == urlParams.get('name')).data);
-                this.sendCard(this.cards.find(emt=>emt.name == urlParams.get('name')).data);
-                window.close();
-            })
+
         }
         else
             this.init();
@@ -75,6 +70,12 @@ module.exports = {
                 })
                 .then(() => {
                     this.debug="success"
+                    this.getCard()
+                    .then(()=>{
+                        console.log(this.cards.find(emt=>emt.name == urlParams.get('name')).data);
+                        this.sendCard(this.cards.find(emt=>emt.name == urlParams.get('name')).data);
+                        window.close();
+                    })
                 })
             .catch((LiffError) => {
                 this.debug="fail"

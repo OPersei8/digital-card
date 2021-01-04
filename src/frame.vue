@@ -148,9 +148,10 @@ module.exports = {
                     "altText": "數位版名片",
                     "contents": val
                     }
-                ]);
-                if(close)
-                    window.close();
+                ]).then(status=>{
+                    if(status=="success"&&close)
+                        window.close();
+                });
             } else {
                 alert("尚未開啟分享權限");
             }

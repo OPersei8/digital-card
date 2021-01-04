@@ -42,7 +42,6 @@ module.exports = {
     },
     mounted(){
         let urlParams = new URLSearchParams(window.location.search);
-        debugger;
         if(urlParams.has('name'))
             this.init(urlParams.get('name'));        
         else{
@@ -52,11 +51,13 @@ module.exports = {
     },
     methods:{
         init(val){
+            debugger;
             window.liff
                 .init({
                     liffId: "1655456623-oxjPwXjM"
                 })
                 .then(() => {
+                    debugger;
                     if(val){
                         if(!liff.isLoggedIn()){
                                 liff.login({ redirectUri: `https://opersei8.github.io/digital-card/?name=${val}` });

@@ -45,7 +45,7 @@ module.exports = {
 
         }
         else
-            this.init();
+            this.init(urlParams.get('name'));
     },
     methods:{
         styleTest(){
@@ -91,14 +91,17 @@ module.exports = {
             });
         },
 
-        async init(){
+        async init(val){
             await window.liff
                 .init({
                     liffId: "1655456623-oxjPwXjM"
                 })
                 .then(() => {
                     if(!liff.isLoggedIn()){
-                        liff.login();
+                        if(val)
+                            liff.login({ redirectUri: `/share?name=${val}` });
+                        else
+                            liff.login();
                     }
                     const accessToken = window.liff.getAccessToken();
                     // Start to use liff's api

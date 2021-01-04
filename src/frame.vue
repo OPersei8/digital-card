@@ -54,8 +54,8 @@ module.exports = {
         }
     },
     methods:{
-        init(val){
-            window.liff
+        async init(val){
+            await window.liff
                 .init({
                     liffId: "1655456623-oxjPwXjM"
                 })

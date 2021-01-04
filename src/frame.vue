@@ -1,7 +1,7 @@
 <template>
     <div class="hello">
         <div class="welcome">
-            <div class="welcome-header">數位名片<br>{{line_username}} ，您好</div>
+            <div class="welcome-header">數位名片{{debug}}<br>{{line_username}} ，您好</div>
             <div class="welcome-body">
             <div v-if="hasCard" class="h100"><button class="h100" @click="sendCard(myCard)">發送自己名片</button></div><br>
             </div>
@@ -31,17 +31,19 @@ module.exports = {
             cardReady:false,
             cards:undefined,
             hasCard:false,
-            myCard:undefined
+            myCard:undefined,
+            debug:""
         }
     },
     mounted(){
         let urlParams = new URLSearchParams(window.location.search);
         if(urlParams.has('name')){
             this.init();
-            console.log('here');
+            this.debug=urlParams.get('name');
             this.getCard()
             .then(()=>{
-                this.sendCard(this.cards.find(emt=>emt.name == urlParams.get('name')).data)
+                console.log(this.cards.find(emt=>emt.name == urlParams.get('name')).data);
+                this.sendCard(this.cards.find(emt=>emt.name == urlParams.get('name')).data);
                 window.close();
             })
         }
@@ -66,11 +68,13 @@ module.exports = {
         },
 
         async init(){
+            this.debug='1';
             await window.liff
                 .init({
                     liffId: "1655456623-oxjPwXjM"
                 })
                 .then(() => {
+                    this.debug='2'
                     if(!liff.isLoggedIn()){
                         liff.login();
                     }

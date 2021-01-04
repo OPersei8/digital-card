@@ -10,18 +10,69 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/versions/2.3.0/sdk.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
-        <script async defer>
+        <script>
             window.onload = () =>{
                 let urlParams = new URLSearchParams(window.location.search);
-                console.log(urlParams.has('q'));
+                let val = urlParams.get('name');
+                liff
+                .init({
+                    liffId: "1655456623-oxjPwXjM"
+                })
+                .then(() => {
+                    if (!liff.isLoggedIn()) {
+                        liff.login({ redirectUri: `https://opersei8.github.io/digital-card/share?name=${val}` });
+                        // Verify that the domain name and path (https://example.com/path) match the endpoint URL.
+                    }
+                    getCard()
+                    .then(()=>{
+                        this.sendCard(this.cards.find(emt=>emt.name == val).data,true)
+                        .then(res=>{
+                            window.close();
+                            liff.closeWindow();
+                        })
+                    })
+                })
+                .catch((LiffError) => {
+                    liff.closeWindow();
+                });
+            };
+
+            var getCard = function(){
+                return new Promise((resolve,reject)=>{
+                    fetch('./cards.json')
+                    .then(res=>res.json())
+                    .catch(err=>reject(err))
+                    .then(data=>{
+                        this.cards=data.data;
+                        resolve();                    
+                    });
+                })
             }
+
+            var sendCard = function(val){
+                return new Promise((resolve,reject)=>{
+                    if (liff.isApiAvailable('shareTargetPicker')) {
+                        liff.shareTargetPicker([
+                            {
+                            "type": "flex",
+                            "altText": "數位版名片",
+                            "contents": val
+                            }
+                        ]).then(status=>{
+                            resolve();
+                        });
+                    } else {
+                        reject("分享權限未開啟");
+                    }
+                })
+           },
         </script>
     </body>
 </html>

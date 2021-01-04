@@ -4,7 +4,7 @@
             <div class="welcome-header">數位名片<br>{{line_username}} ，您好</div>
             <div class="welcome-body">
             <div v-if="hasCard" class="h100"><button class="h100" @click="sendCard(myCard)">發送自己名片</button></div><br>
-            <div>{{debug}}<button @click="close">x</button></div>
+            <!-- <div>{{debug}}<button @click="close">x</button></div> -->
             </div>
         </div>
         <div>發送同事名片:</div>
@@ -17,8 +17,6 @@
                 <button class="card-send" @click="sendCard(card.data)">發送名片</button>
             </div>
         </div>
-        <!-- <div>{{msg}}</div>
-        <button v-if="ready" @click="sendCard">發送名片</button> -->
     </div>
 </template>
  
@@ -38,11 +36,8 @@ module.exports = {
     },
     mounted(){
         let urlParams = new URLSearchParams(window.location.search);
-        console.log(urlParams);
-        debugger;
         if(urlParams.has('name')){
             this.init(urlParams.get('name'));        
-            this.debug = urlParams.get('name');
         }
         else
             this.init();

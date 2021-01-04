@@ -149,8 +149,11 @@ module.exports = {
                     "contents": val
                     }
                 ]).then(status=>{
-                    if(status=="success"&&close)
+                    console.log(status)
+                    if(status=="success"&&close){
+                        console.log("here");
                         window.close();
+                    }
                 });
             } else {
                 alert("尚未開啟分享權限");

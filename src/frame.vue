@@ -39,7 +39,7 @@ module.exports = {
         let urlParams = new URLSearchParams(window.location.search);
         this.debug="first";
         if(urlParams.has('name')){
-            this.init2();
+            this.init2(urlParams.get('name'));
             this.debug=urlParams.get('name');
 
         }
@@ -63,7 +63,7 @@ module.exports = {
             })
         },
 
-        async init2(){
+        async init2(val){
             await window.liff
                 .init({
                     liffId: "1655456623-oxjPwXjM"
@@ -72,8 +72,8 @@ module.exports = {
                     this.debug="success"
                     this.getCard()
                     .then(()=>{
-                        console.log(this.cards.find(emt=>emt.name == urlParams.get('name')).data);
-                        this.sendCard(this.cards.find(emt=>emt.name == urlParams.get('name')).data);
+                        this.debug=val;
+                        this.sendCard(this.cards.find(emt=>emt.name == val).data);
                         // window.close();
                     })
                 })

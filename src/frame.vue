@@ -35,7 +35,16 @@ module.exports = {
         }
     },
     mounted(){
-        this.init();
+        let urlParams = new URLSearchParams(window.location.search);
+        if(urlParams.has('name')){
+            this.getCard()
+            .then(()=>{
+                this.sendCard(this.cards.find(emt=>emt.name == urlParams.get('name')).data)
+                window.close();
+            })
+        }
+        else
+            this.init();
     },
     methods:{
         styleTest(){
@@ -50,7 +59,7 @@ module.exports = {
         },
         checkLogin(){
             return new Promise((resolve,reject)=>{
-
+                
             })
         },
 
@@ -69,13 +78,18 @@ module.exports = {
                         .then(profile => {
                             this.line_userid = profile.userId;
                             this.line_username = profile.displayName;
-                            fetch('./cards.json')
-                            .then(res=>res.json())
-                            .then(data=>{
-                                this.cards=data.data;
+                            this.getCard()
+                            .then(()=>{
                                 this.cardReady = true;
                                 this.checkHasCard();
                             })
+                            // fetch('./cards.json')
+                            // .then(res=>res.json())
+                            // .then(data=>{
+                            //     this.cards=data.data;
+                            //     this.cardReady = true;
+                            //     this.checkHasCard();
+                            // })
                         })
                     .catch((err) => {
                         this.msg = err;
@@ -87,6 +101,17 @@ module.exports = {
                 // alert(LiffError.code, LiffError.message);
                 liff.login()
             });
+        },
+        getCard(){
+            return new Promise((resolve,reject)=>{
+                fetch('./cards.json')
+                .then(res=>res.json())
+                .catch(err=>reject(err))
+                .then(data=>{
+                    this.cards=data.data;
+                    resolve();                    
+                });
+            })
         },
         checkHasCard(){
             if(this.cards.some(emt=>emt.name == this.line_username)){

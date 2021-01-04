@@ -1,5 +1,9 @@
 <template>
-    <div class="hello">
+<div>
+    <div v-if="share" class="share hello">
+        分享名片
+    </div>
+    <div v-if="!share" class="hello">
         <div class="welcome">
             <div class="welcome-header">數位名片<br>{{line_username}} ，您好</div>
             <div class="welcome-body">
@@ -18,6 +22,7 @@
             </div>
         </div>
     </div>
+</div>
 </template>
  
 <script>
@@ -32,15 +37,17 @@ module.exports = {
             hasCard:false,
             myCard:undefined,
             debug:"",
+            share:true,
         }
     },
     mounted(){
         let urlParams = new URLSearchParams(window.location.search);
-        if(urlParams.has('name')){
+        if(urlParams.has('name'))
             this.init(urlParams.get('name'));        
-        }
-        else
+        else{
+            this.share = false;
             this.init();
+        }
     },
     methods:{
         styleTest(){

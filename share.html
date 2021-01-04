@@ -37,6 +37,7 @@
                     getCard()
                     .then(()=>{
                         console.log("here5")
+                        console.log(cards);
                         sendCard(cards.find(emt=>emt.name == val).data)
                         .then(res=>{
                             window.close();

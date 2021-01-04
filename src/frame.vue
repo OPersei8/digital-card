@@ -36,7 +36,9 @@ module.exports = {
     },
     mounted(){
         let urlParams = new URLSearchParams(window.location.search);
+        console.log(urlParams.has('name'));
         if(urlParams.has('name')){
+            console.log(urlParams.get('name'));
             this.getCard()
             .then(()=>{
                 this.sendCard(this.cards.find(emt=>emt.name == urlParams.get('name')).data)

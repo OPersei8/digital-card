@@ -38,7 +38,7 @@ module.exports = {
     mounted(){
         let urlParams = new URLSearchParams(window.location.search);
         if(urlParams.has('name')){
-            this.init();
+            this.init2();
             this.debug=urlParams.get('name');
             this.getCard()
             .then(()=>{
@@ -67,14 +67,25 @@ module.exports = {
             })
         },
 
-        async init(){
-            this.debug='1';
+        async init2(){
             await window.liff
                 .init({
                     liffId: "1655456623-oxjPwXjM"
                 })
                 .then(() => {
-                    this.debug='2'
+                    this.debug="success"
+                })
+            .catch((LiffError) => {
+                this.debug="fail"
+            });
+        },
+
+        async init(){
+            await window.liff
+                .init({
+                    liffId: "1655456623-oxjPwXjM"
+                })
+                .then(() => {
                     if(!liff.isLoggedIn()){
                         liff.login();
                     }

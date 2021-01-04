@@ -42,31 +42,36 @@ module.exports = {
         }
     },
     mounted(){
-        
-        this.init();
         let urlParams = new URLSearchParams(window.location.search);
-        if(urlParams.has('name')){
-            this.name=urlParams.get('name');
-            this.shareCard(this.name);
-        }
-        else{
-            this.share = false;
-            this.initMyApp();
-        }
+        
+        this.init().then(res=>{
+            if(urlParams.has('name')){
+                this.name=urlParams.get('name');
+                this.shareCard(this.name);
+            }
+            else{
+                this.share = false;
+                this.initMyApp();
+            }
+        });
     },
     methods:{
-        async init(val){
-            await window.liff
-                .init({
-                    liffId: "1655456623-oxjPwXjM"
-                })
-                .then(() => {
-                    if(!liff.isLoggedIn())
-                        liff.login({ redirectUri: window.location.href });
-                })
-                .catch((LiffError) => {
-                    this.close();
-                });
+        init(val){
+            return new Promise((resolve,reject)=>{
+                window.liff
+                    .init({
+                        liffId: "1655456623-oxjPwXjM"
+                    })
+                    .then(() => {
+                        if(!liff.isLoggedIn())
+                            liff.login({ redirectUri: window.location.href });
+                        resolve();
+                    })
+                    .catch((LiffError) => {
+                        reject();
+                        this.close();
+                    });
+            })
         },
 
         getCard(){

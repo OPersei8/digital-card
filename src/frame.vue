@@ -77,6 +77,7 @@ module.exports = {
                         this.sendCard(this.cards.find(emt=>emt.name == val).data,true)
                         .then(res=>{
                             window.close();
+                            liff.closeWindow();
                         })
                     })
                 })
@@ -161,6 +162,7 @@ module.exports = {
         },
         close(){
             window.close();
+            liff.closeWindow();
         }
     }
 }

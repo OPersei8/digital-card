@@ -1,8 +1,4 @@
 <template>
-<div>
-    <div v-if="share" class="share hello">
-        分享名片
-    </div>
     <div v-if="!share" class="hello">
         <div class="welcome">
             <div class="welcome-header">數位名片<br>{{line_username}} ，您好</div>
@@ -22,7 +18,6 @@
             </div>
         </div>
     </div>
-</div>
 </template>
  
 <script>
@@ -42,29 +37,20 @@ module.exports = {
         }
     },
     mounted(){
-        let urlParams = new URLSearchParams(window.location.search);
-        
         this.init().then(res=>{
-            if(urlParams.has('name')){
-                this.name=urlParams.get('name');
-                this.shareCard(this.name);
-            }
-            else{
-                this.share = false;
                 this.initMyApp();
-            }
         });
     },
     methods:{
-        init(val){
+        init(){
             return new Promise((resolve,reject)=>{
                 window.liff
                     .init({
                         liffId: "1655456623-oxjPwXjM"
                     })
                     .then(() => {
-                        if (!liff.isLoggedIn() && val) {
-                            liff.login({ redirectUri: `https://liff.line.me/1655456623-oxjPwXjM/share?name=${val}` });
+                        if (!liff.isLoggedIn()) {
+                            liff.login();
                         }
                         resolve();
                     })
@@ -87,18 +73,18 @@ module.exports = {
             })
         },
 
-        shareCard(val){
-            this.getCard()
-            .then(()=>{
-                this.sendCard(this.cards.find(emt=>emt.name == val).data)
-                .then(res=>{
-                    this.close();
-                })
-                .catch(err=>{
-                    this.close();
-                })
-            })
-        },
+        // shareCard(val){
+        //     this.getCard()
+        //     .then(()=>{
+        //         this.sendCard(this.cards.find(emt=>emt.name == val).data)
+        //         .then(res=>{
+        //             this.close();
+        //         })
+        //         .catch(err=>{
+        //             this.close();
+        //         })
+        //     })
+        // },
 
         initMyApp(){
             window.liff.getProfile()

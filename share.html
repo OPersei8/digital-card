@@ -18,10 +18,8 @@
         <![endif]-->
         
         <script>
-            var cards = []
-            console.log("here1")
+            var cards = [];
             window.onload = () =>{
-                console.log("here2")
                 let urlParams = new URLSearchParams(window.location.search);
                 let val = urlParams.get('index');
                 liff
@@ -30,8 +28,6 @@
                 })
                 .then(() => {
                     if (!liff.isLoggedIn()) {
-                        console.log("here3");
-                        debugger;
                         liff.login({ redirectUri: `https://opersei8.github.io/digital-card/share?index=${val}` });
                         // Verify that the domain name and path (https://example.com/path) match the endpoint URL.
                     }

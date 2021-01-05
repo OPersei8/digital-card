@@ -28,7 +28,7 @@
                 })
                 .then(() => {
                     if (!liff.isLoggedIn()) {
-                        liff.login({ redirectUri: `https://opersei8.github.io/digital-card/share/?index=${val}` });
+                        liff.login({ redirectUri: `https://opersei8.github.io/digital-card/share?index=${val}` });
                         // Verify that the domain name and path (https://example.com/path) match the endpoint URL.
                     }
                     getCard()

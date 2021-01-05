@@ -49,9 +49,9 @@ module.exports = {
                         liffId: "1655456623-oxjPwXjM"
                     })
                     .then(() => {
-                        if (!liff.isLoggedIn()) {
-                            liff.login();
-                        }
+                        // if (!liff.isLoggedIn()) {
+                        //     liff.login();
+                        // }
                         resolve();
                     })
                     .catch((LiffError) => {

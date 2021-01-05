@@ -1,5 +1,5 @@
 <template>
-    <div v-if="!share" class="hello">
+    <div class="hello">
         <div class="welcome">
             <div class="welcome-header">數位名片<br>{{line_username}} ，您好</div>
             <div class="welcome-body">
@@ -32,7 +32,6 @@ module.exports = {
             hasCard:false,
             myCard:undefined,
             debug:"",
-            share:true,
             name:""
         }
     },

@@ -63,8 +63,6 @@ module.exports = {
                         liffId: "1655456623-oxjPwXjM"
                     })
                     .then(() => {
-                        if(!liff.isLoggedIn())
-                            liff.login({ redirectUri: window.location.href });
                         resolve();
                     })
                     .catch((LiffError) => {

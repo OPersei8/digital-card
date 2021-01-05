@@ -176,7 +176,7 @@
                     "action": {
                         "type": "uri",
                         "label": "分享",
-                        "uri": "https://liff.line.me/1655456623-oxjPwXjM?name=%e4%ba%8e%e5%87%a1"
+                        "uri": "https://liff.line.me/1655456623-oxjPwXjM/?name=%e4%ba%8e%e5%87%a1"
                     },
                     "position": "absolute",
                     "gravity": "bottom",

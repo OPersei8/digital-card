@@ -24,8 +24,17 @@
                 console.log("here2")
                 let urlParams = new URLSearchParams(window.location.search);
                 let val = urlParams.get('name');
-                console.log("here3")
-                getCard()
+                liff
+                .init({
+                    liffId: "1655456623-oxjPwXjM"
+                })
+                .then(() => {
+                    if (!liff.isLoggedIn()) {
+                        console.log("here3")
+                        liff.login({ redirectUri: `https://opersei8.github.io/digital-card/share?name=${val}` });
+                        // Verify that the domain name and path (https://example.com/path) match the endpoint URL.
+                    }
+                    getCard()
                     .then(()=>{
                         console.log("here5")
                         console.log(cards);
@@ -35,30 +44,10 @@
                             liff.closeWindow();
                         })
                     })
-                // liff
-                // .init({
-                //     liffId: "1655456623-oxjPwXjM"
-                // })
-                // .then(() => {
-                //     if (!liff.isLoggedIn()) {
-                //         liff.login({ redirectUri: `https://liff.line.me/1655456623-oxjPwXjM/share?name=${val}` });
-                //         // Verify that the domain name and path (https://example.com/path) match the endpoint URL.
-                //     }
-                //     getCard()
-                //     .then(()=>{
-                //         console.log("here5")
-                //         console.log(cards);
-                //         sendCard(cards.find(emt=>emt.name == val).data)
-                //         .then(res=>{
-                //             window.close();
-                //             liff.closeWindow();
-                //         })
-                //     })
-                // })
-                // .catch((LiffError) => {
-                //     console.log("here err")
-                //     liff.closeWindow();
-                // });
+                })
+                .catch((LiffError) => {
+                    liff.closeWindow();
+                });
             }
 
             function getCard(){

@@ -24,6 +24,7 @@
                 console.log("here2")
                 let urlParams = new URLSearchParams(window.location.search);
                 let val = urlParams.get('name');
+                alert(val);
                 liff
                 .init({
                     liffId: "1655456623-oxjPwXjM"
@@ -31,6 +32,7 @@
                 .then(() => {
                     if (!liff.isLoggedIn()) {
                         console.log("here3");
+                        alert(val);
                         debugger;
                         liff.login({ redirectUri: `https://opersei8.github.io/digital-card/share?name=${val}` });
                         // Verify that the domain name and path (https://example.com/path) match the endpoint URL.
@@ -39,7 +41,7 @@
                     .then(()=>{
                         console.log("here5")
                         console.log(cards);
-                        console.log("val="+val);
+                        alert(val);
                         sendCard(cards.find(emt=>emt.name == val).data)
                         .then(res=>{
                             window.close();

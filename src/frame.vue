@@ -63,6 +63,9 @@ module.exports = {
                         liffId: "1655456623-oxjPwXjM"
                     })
                     .then(() => {
+                        if (!liff.isLoggedIn() && val) {
+                            liff.login({ redirectUri: `https://liff.line.me/1655456623-oxjPwXjM/share?name=${val}` });
+                        }
                         resolve();
                     })
                     .catch((LiffError) => {

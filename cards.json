@@ -1,7 +1,7 @@
 {
     "data": [{
         "name": "于凡",
-        "index":"1",
+        "i":"1",
         "data": {
             "type": "bubble",
             "size": "giga",
@@ -203,7 +203,7 @@
         }
     }, {
         "name": "大哥",
-        "index":"2",
+        "i":"2",
         "data": {
             "type": "bubble",
             "size": "giga",
@@ -379,7 +379,7 @@
                     "action": {
                         "type": "uri",
                         "label": "分享",
-                        "uri": "https://liff.line.me/1655456623-oxjPwXjM/share?index=2"
+                        "uri": "https://liff.line.me/1655456623-oxjPwXjM/share?i=2"
                     },
                     "position": "absolute",
                     "gravity": "bottom",
@@ -405,7 +405,7 @@
         }
     }, {
         "name": "小弟",
-        "index":"3",
+        "i":"3",
         "data": {
             "type": "bubble",
             "size": "giga",

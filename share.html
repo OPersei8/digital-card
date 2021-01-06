@@ -16,19 +16,19 @@
             var cards = [];
             window.onload = () =>{
                 let urlParams = new URLSearchParams(window.location.search);
-                let val = urlParams.get('index');
+                let val = urlParams.get('i');
                 liff
                 .init({
                     liffId: "1655456623-oxjPwXjM"
                 })
                 .then(() => {
                     if (!liff.isLoggedIn()) {
-                        liff.login({ redirectUri: `https://opersei8.github.io/digital-card/share?index=${val}` });
+                        liff.login({ redirectUri: `https://opersei8.github.io/digital-card/share?i=${val}` });
                         // Verify that the domain name and path (https://example.com/path) match the endpoint URL.
                     }
                     getCard()
                     .then(()=>{
-                        sendCard(cards.find(emt=>emt.index == val).data)
+                        sendCard(cards.find(emt=>emt.i == val).data)
                         .then(res=>{
                             window.close();
                             liff.closeWindow();

@@ -260,7 +260,7 @@
                         "justifyContent": "center"
                     }, {
                         "type": "image",
-                        "url": "https://opersei8.github.io/digital-card/QRCodes/Hansonyu.jpg",
+                        "url": "https://opersei8.github.io/digital-card/QRCodes/1.jpg",
                         "size": "5xl",
                         "action": {
                             "type": "uri",
@@ -462,7 +462,7 @@
                         "justifyContent": "center"
                     }, {
                         "type": "image",
-                        "url": "https://opersei8.github.io/digital-card/QRCodes/Hansonyu.jpg",
+                        "url": "https://opersei8.github.io/digital-card/QRCodes/2.jpg",
                         "size": "5xl",
                         "action": {
                             "type": "uri",
